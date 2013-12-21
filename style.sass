@@ -27,13 +27,41 @@ body
 	width: 70%
 	margin: 2em auto
 	text-align: center
-	h1
-		font-size: 200%
-		margin: 1em 0
-		padding: 1em 0
-		font-size: 2em
-		text-shadow: 1px 1px 0 #fff
-		border-bottom: 2px solid #cccccc
+	header
+		border-bottom: 1px solid #ccc
+		@include prefix(box-shadow, 0 1px 0 rgba(255,255,255,.8))
+		margin-bottom: 2em
+		h1.tooltip-head
+			display: inline-block
+			position: relative
+			padding: .8em 2em
+			background: rgba(0, 0, 0, 0.8)
+			color: #FFF
+			text-shadow: 1px 1px 0 #000
+			margin: 1em 0
+			font-size: 2em
+			@include prefix(box-shadow, 0 0 1em rgba(0, 0, 0, 0.5))
+			&:before
+				content: ''
+				position: absolute
+				z-index: 1
+				top: 100%
+				left: 50%
+				width: 1em
+				height: 1em
+				background: rgba(0, 0, 0, 0.2)
+				@include prefix(border-radius, 50%)
+				@include prefix(transform, translate(-50%, .5em))
+			&:after
+				content: ''
+				display: block
+				border: 1em solid transparent
+				border-top-color: rgba(0, 0, 0, 0.8)
+				position: absolute
+				z-index: 2
+				left: 50%
+				top: 100%
+				@include prefix(transform, translateX(-50%))
 		color: #333
 	p
 		font-size: 120%
