@@ -192,3 +192,58 @@ body
 			-webkit-animation: fadeInDown-top .2s linear
 		&:before
 			-webkit-animation: fadeInDown-tip-top .2s linear
+
+	// tooltip placements
+	&[px-tooltip-placement="bottom"] 
+		&:after 
+			bottom: initial
+			top: 100%
+			@include prefix(transform, translate(-50%, .5em))
+		
+		&:before
+			top: initial
+			bottom: 0
+			@include prefix(transform, translate(-50%, .2em))
+			border-color: transparent
+			border-bottom-color: $backgroundColor
+
+		&:hover
+			&:after
+				-webkit-animation: fadeInDown-bottom .2s linear
+			&:before
+				-webkit-animation: fadeInDown-tip-bottom .2s linear
+
+	&[px-tooltip-placement="right"]
+		&:after, &:before
+			left: 100%
+			bottom: initial
+			top: 50%
+		&:after
+			@include prefix(transform, translate( .5em, -50%))
+		&:before
+			@include prefix(transform, translate( -.2em, 0))
+			border-color: transparent
+			border-right-color: $backgroundColor
+		&:hover
+			&:after
+				-webkit-animation: fadeInDown-right .2s linear
+			&:before
+				-webkit-animation: fadeInDown-tip-right .2s linear
+
+	&[px-tooltip-placement="left"]
+		&:after, &:before
+			left: initial
+			bottom: initial
+			right: 100%
+			top: 50%
+		&:after
+			@include prefix(transform, translate(-.7em, -50%))
+		&:before
+			@include prefix(transform, translate(.2em, 0))
+			border-color: transparent
+			border-left-color: $backgroundColor
+		&:hover
+			&:after
+				-webkit-animation: fadeInDown-left .2s linear
+			&:before
+				-webkit-animation: fadeInDown-tip-left .2s linear
