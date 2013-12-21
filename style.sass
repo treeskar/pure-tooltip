@@ -141,9 +141,9 @@ body
 	100%
 		display: none
 
-$tooltipAttr: px-tooltip
-$triggerAttr: px-tooltip-trigger
-$placementAttr: px-tooltip-placement
+$tooltipAttr: tooltip
+$triggerAttr: tooltip-trigger
+$placementAttr: tooltip-placement
 
 $backgroundColor: rgba(0,0,0,0.8)
 $textColor: #fff
@@ -165,7 +165,7 @@ $textColor: #fff
 		@include prefix(transition, .5s linear opacity)
 	
 	&:after 
-		content: attr(px-tooltip)
+		content: attr(#{$tooltipAttr})
 		bottom: 100%
 		left: 50%
 		@include prefix(transform, translate(-50%, -.5em))
