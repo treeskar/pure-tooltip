@@ -4,6 +4,17 @@
 	#{$name}: $arguments
 	-webkit-#{$name}: $arguments
 	-moz-#{$name}: $arguments
+	-o-#{$name}: $arguments
+
+@mixin keyframe ($animation_name)
+	@keyframes $animation_name
+		@content
+	@-webkit-keyframes $animation_name
+		@content
+	@-moz-keyframes $animation_name
+		@content
+	@-o-keyframes $animation_name
+		@content
 
 body
 	background: url(img/bg.png) 0 0 #ddd
@@ -45,88 +56,88 @@ body
 // Animations
 
 // top tooltip animation
-@-webkit-keyframes fadeInDown-top
+@include keyframe(fadeInDown-top)
 	0%
 		opacity: 0
 		z-index: -100
-		-webkit-transform: translate(-50%, -1.5em)
+		@include prefix(transform, translate(-50%, -1.5em))
 	100%
 		opacity: 1
 		z-index: 100
-		-webkit-transform: translate(-50%, -.5em)
+		@include prefix(transform, translate(-50%, -.5em))
 
-@-webkit-keyframes fadeInDown-tip-top
+@include keyframe(fadeInDown-tip-top)
 	0%
 		opacity: 0
 		z-index: -100
-		-webkit-transform: translate(-50%, -1.2em)
+		@include prefix(transform, translate(-50%, -1.2em))
 	100%
 		opacity: 1
 		z-index: 100
-		-webkit-transform: translate(-50%, -.2em)
+		@include prefix(transform, translate(-50%, -.2em))
 
 // bottom tooltip animation
-@-webkit-keyframes fadeInDown-bottom
+@include keyframe(fadeInDown-bottom)
 	0%
 		opacity: 0
 		z-index: -100
-		-webkit-transform: translate(-50%, 1.5em)
+		@include prefix(transform, translate(-50%, 1.5em))
 	100%
 		opacity: 1
 		z-index: 100
-		-webkit-transform: translate(-50%, .5em)
+		@include prefix(transform, translate(-50%, .5em))
 
-@-webkit-keyframes fadeInDown-tip-bottom
+@include keyframe(fadeInDown-tip-bottom)
 	0%
 		opacity: 0
 		z-index: -100
-		-webkit-transform: translate(-50%, 1.2em)
+		@include prefix(transform, translate(-50%, 1.2em))
 	100%
 		opacity: 1
 		z-index: 100
-		-webkit-transform: translate(-50%, .2em)
+		@include prefix(transform, translate(-50%, .2em))
 
 // right tooltip animation
-@-webkit-keyframes fadeInDown-right
+@include keyframe(fadeInDown-right)
 	0%
 		opacity: 0
 		z-index: -100
-		-webkit-transform: translate(1.5em, -50%)
+		@include prefix(transform, translate(1.5em, -50%))
 	100%
 		opacity: 1
 		z-index: 100
-		-webkit-transform: translate(.5em, -50%)
+		@include prefix(transform, translate(.5em, -50%))
 
-@-webkit-keyframes fadeInDown-tip-right
+@include keyframe(fadeInDown-tip-right)
 	0%
 		opacity: 0
 		z-index: -100
-		-webkit-transform: translate(.8em, 0)
+		@include prefix(transform, translate(.8em, 0))
 	100%
 		opacity: 1
 		z-index: 100
-		-webkit-transform: translate(-.2em, 0)
+		@include prefix(transform, translate(.2em, 0))
 
 // left tooltip animation
-@-webkit-keyframes fadeInDown-left
+@include keyframe(fadeInDown-left)
 	0%
 		opacity: 0
 		z-index: -100
-		-webkit-transform: translate(-1.5em, -50%)
+		@include prefix(transform, translate(-1.5em, -50%))
 	100%
 		opacity: 1
 		z-index: 100
-		-webkit-transform: translate(-.5em, -50%)
+		@include prefix(transform, translate(-.5em, -50%))
 
-@-webkit-keyframes fadeInDown-tip-left
+@include keyframe(fadeInDown-tip-left)
 	0%
 		opacity: 0
 		z-index: -100
-		-webkit-transform: translate(-0.8em, 0)
+		@include prefix(transform, translate(-0.8em, 0))
 	100%
 		opacity: 1
 		z-index: 100
-		-webkit-transform: translate(.2em, 0)
+		@include prefix(transform, translate(.2em, 0))
 
 
 @-webkit-keyframes fadeOutUp-top
@@ -174,8 +185,7 @@ $textColor: #fff
 		color: $textColor
 		text-shadow: 1px 1px 0 #000
 		white-space: pre
-		-webkit-animation: fadeOutUp-top .2s linear
-	
+
 	&:before 
 		height: 0
 		width: 0
@@ -193,9 +203,9 @@ $textColor: #fff
 			display: block
 			opacity: 1
 		&:after
-			-webkit-animation: fadeInDown-top .2s linear
+			@include prefix(animation, fadeInDown-top .2s linear)
 		&:before
-			-webkit-animation: fadeInDown-tip-top .2s linear
+			@include prefix(animation, fadeInDown-tip-top .2s linear)
 
 	&[#{$triggerAttr}="focus"]
 		outline: none
@@ -217,9 +227,9 @@ $textColor: #fff
 		&:not([#{$triggerAttr}="focus"]):hover,
 		&:focus
 			&:after
-				-webkit-animation: fadeInDown-bottom .2s linear
+				@include prefix(animation, fadeInDown-bottom .2s linear)
 			&:before
-				-webkit-animation: fadeInDown-tip-bottom .2s linear
+				@include prefix(animation, fadeInDown-tip-bottom .2s linear)
 
 	&[#{$placementAttr}="right"]
 		&:after, &:before
@@ -235,9 +245,9 @@ $textColor: #fff
 		&:not([#{$triggerAttr}="focus"]):hover,
 		&:focus
 			&:after
-				-webkit-animation: fadeInDown-right .2s linear
+				@include prefix(animation, fadeInDown-right .2s linear)
 			&:before
-				-webkit-animation: fadeInDown-tip-right .2s linear
+				@include prefix(animation, fadeInDown-tip-right .2s linear)
 
 	&[#{$placementAttr}="left"]
 		&:after, &:before
@@ -254,6 +264,6 @@ $textColor: #fff
 		&:not([#{$triggerAttr}="focus"]):hover,
 		&:focus
 			&:after
-				-webkit-animation: fadeInDown-left .2s linear
+				@include prefix(animation, fadeInDown-left .2s linear)
 			&:before
-				-webkit-animation: fadeInDown-tip-left .2s linear
+				@include prefix(animation, fadeInDown-tip-left .2s linear)
