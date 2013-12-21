@@ -274,9 +274,9 @@ body {
     right: 100%;
     top: 50%; }
   [px-tooltip][px-tooltip-placement="left"]:after {
-    transform: translate(-0.7em, -50%);
-    -webkit-transform: translate(-0.7em, -50%);
-    -moz-transform: translate(-0.7em, -50%); }
+    transform: translate(-0.5em, -50%);
+    -webkit-transform: translate(-0.5em, -50%);
+    -moz-transform: translate(-0.5em, -50%); }
   [px-tooltip][px-tooltip-placement="left"]:before {
     transform: translate(0.2em, 0);
     -webkit-transform: translate(0.2em, 0);

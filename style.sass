@@ -141,9 +141,14 @@ body
 	100%
 		display: none
 
-[px-tooltip] 
-	$backgroundColor: rgba(0,0,0,0.8)
-	$textColor: #fff
+$tooltipAttr: px-tooltip
+$triggerAttr: px-tooltip-trigger
+$placementAttr: px-tooltip-placement
+
+$backgroundColor: rgba(0,0,0,0.8)
+$textColor: #fff
+
+[#{$tooltipAttr}]
 
 	position: relative
 	&:hover, &:focus
@@ -192,7 +197,7 @@ body
 			-webkit-animation: fadeInDown-tip-top .2s linear
 
 	// tooltip placements
-	&[px-tooltip-placement="bottom"] 
+	&[#{$placementAttr}="bottom"]
 		&:after 
 			bottom: initial
 			top: 100%
@@ -211,7 +216,7 @@ body
 			&:before
 				-webkit-animation: fadeInDown-tip-bottom .2s linear
 
-	&[px-tooltip-placement="right"]
+	&[#{$placementAttr}="right"]
 		&:after, &:before
 			left: 100%
 			bottom: initial
@@ -228,14 +233,14 @@ body
 			&:before
 				-webkit-animation: fadeInDown-tip-right .2s linear
 
-	&[px-tooltip-placement="left"]
+	&[#{$placementAttr}="left"]
 		&:after, &:before
 			left: initial
 			bottom: initial
 			right: 100%
 			top: 50%
 		&:after
-			@include prefix(transform, translate(-.7em, -50%))
+			@include prefix(transform, translate(-.5em, -50%))
 		&:before
 			@include prefix(transform, translate(.2em, 0))
 			border-color: transparent
