@@ -43,3 +43,102 @@ body
 			border: 2px solid #cccccc
 			&:focus
 				border-color: #6FA6D1
+
+// Animations
+
+// top tooltip animation
+@-webkit-keyframes fadeInDown-top
+	0%
+		opacity: 0
+		z-index: -100
+		-webkit-transform: translate(-50%, -1.5em)
+	100%
+		opacity: 1
+		z-index: 100
+		-webkit-transform: translate(-50%, -.5em)
+
+@-webkit-keyframes fadeInDown-tip-top
+	0%
+		opacity: 0
+		z-index: -100
+		-webkit-transform: translate(-50%, -1.2em)
+	100%
+		opacity: 1
+		z-index: 100
+		-webkit-transform: translate(-50%, -.2em)
+
+// bottom tooltip animation
+@-webkit-keyframes fadeInDown-bottom
+	0%
+		opacity: 0
+		z-index: -100
+		-webkit-transform: translate(-50%, 1.5em)
+	100%
+		opacity: 1
+		z-index: 100
+		-webkit-transform: translate(-50%, .5em)
+
+@-webkit-keyframes fadeInDown-tip-bottom
+	0%
+		opacity: 0
+		z-index: -100
+		-webkit-transform: translate(-50%, 1.2em)
+	100%
+		opacity: 1
+		z-index: 100
+		-webkit-transform: translate(-50%, .2em)
+
+// right tooltip animation
+@-webkit-keyframes fadeInDown-right
+	0%
+		opacity: 0
+		z-index: -100
+		-webkit-transform: translate(1.5em, -50%)
+	100%
+		opacity: 1
+		z-index: 100
+		-webkit-transform: translate(.5em, -50%)
+
+@-webkit-keyframes fadeInDown-tip-right
+	0%
+		opacity: 0
+		z-index: -100
+		-webkit-transform: translate(.8em, 0)
+	100%
+		opacity: 1
+		z-index: 100
+		-webkit-transform: translate(-.2em, 0)
+
+// left tooltip animation
+@-webkit-keyframes fadeInDown-left
+	0%
+		opacity: 0
+		z-index: -100
+		-webkit-transform: translate(-1.5em, -50%)
+	100%
+		opacity: 1
+		z-index: 100
+		-webkit-transform: translate(-.5em, -50%)
+
+@-webkit-keyframes fadeInDown-tip-left
+	0%
+		opacity: 0
+		z-index: -100
+		-webkit-transform: translate(-0.8em, 0)
+	100%
+		opacity: 1
+		z-index: 100
+		-webkit-transform: translate(.2em, 0)
+
+
+@-webkit-keyframes fadeOutUp-top
+	0%
+		display: block
+	1%
+		opacity: 1
+		-webkit-transform: translate(-50%, -.5em)
+	99%
+		opacity: 0
+		-webkit-transform: translate(-50%, -1.5em)
+	100%
+		display: none
