@@ -62,27 +62,35 @@ body
 				left: 50%
 				top: 100%
 				@include prefix(transform, translateX(-50%))
+	article
 		color: #333
-	p
-		font-size: 120%
-		text-align: left
-		line-height: 160%
-		margin: 1em 0
-	form
-		text-align: left
-		padding: 1em 0
-		border-top: 2px solid #ccc
-		@include prefix(box-shadow, 0 -1px 0 #fff)
-		label
-			font-size: 1em
-			margin: 0 1em
-		input
-			font-size: 1em
-			outline: none
-			padding: .5em 1em
-			border: 2px solid #cccccc
-			&:focus
-				border-color: #6FA6D1
+		p
+			font-size: 120%
+			text-align: left
+			line-height: 160%
+			margin: 1em 0
+		a
+			color: #1443BB
+			text-decoration: none
+			@include prefix(transition, .3s ease-in-out color)
+			&:hover
+				color: #1657FC
+
+		form
+			text-align: left
+			padding: 1em 0
+			border-top: 2px solid #ccc
+			@include prefix(box-shadow, 0 -1px 0 #fff)
+			label
+				font-size: 1em
+				margin: 0 1em
+			input
+				font-size: 1em
+				outline: none
+				padding: .5em 1em
+				border: 2px solid #cccccc
+				&:focus
+					border-color: #6FA6D1
 
 // Animations
 
