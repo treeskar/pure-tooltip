@@ -1,6 +1,6 @@
 #Pure tooltip
 
-**project even not, alpha**
+**Project even not, alpha**
 
 * No Java Script, ony css
 * Placement support (top, right, bottom, left)
