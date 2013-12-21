@@ -1,14 +1,12 @@
-Pure tooltip
-============
+#Pure tooltip
 
 **project even not, alpha**
 
 * No Java Script, ony css
 * Placement support (top, right, bottom, left)
 
-Task List
----------
+##Task List
 
--[x] Fade in animation
--[ ] Browser support optimization
--[ ] Placement (before, after) rtl support
+1. ✓ Fade in animation 
+2. Browser support optimization
+3. Placement (before, after) rtl support
