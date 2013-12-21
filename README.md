@@ -9,6 +9,6 @@ Pure tooltip
 Task List
 ---------
 
-[x] Fade in animation
-[ ] Browser support optimization
-[ ] Placement (before, after) rtl support
+-[x] Fade in animation
+-[ ] Browser support optimization
+-[ ] Placement (before, after) rtl support
