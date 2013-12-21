@@ -91,6 +91,34 @@ body
 				border: 2px solid #cccccc
 				&:focus
 					border-color: #6FA6D1
+a.fork
+	display: block
+	position: fixed
+	z-index: 3
+	top: 0
+	right: 0
+	background-color: rgba(23, 59, 151, .9)
+	padding: 1px 0
+	text-decoration: none
+	text-align: center
+	@include prefix(box-shadow, 0 0 1em rgba(0,0,0,.5))
+	border-top: 1px solid #1F186E
+	border-bottom: 1px solid #1F186E
+	@include prefix(transform, rotate(45deg) translate(4em, -0.2em))
+	&:after
+		content: attr(title)
+		display: block
+		font-size: 1em
+		color: #77A4DD
+		text-shadow: 1px 1px .2em #0B0B5C
+		border-top: 2px solid #77A4DD
+		border-bottom: 2px solid #77A4DD
+		padding: 0.5em 3em
+		@include prefix(transition, .2s linear all)
+	&:hover
+		&:after
+			color: #C5D8F0
+			border-color: #AECCF1
 
 // Animations
 
