@@ -142,3 +142,53 @@ body
 		-webkit-transform: translate(-50%, -1.5em)
 	100%
 		display: none
+
+[px-tooltip] 
+	$backgroundColor: rgba(0,0,0,0.8)
+	$textColor: #fff
+
+	position: relative
+	&:hover, &:focus
+		// must be visible on hover
+		overflow: visible
+		z-index: 10
+	
+	&:after, &:before
+		position: absolute
+		display: none
+		opacity: 0
+		font: normal .8em Arial, Helvetica, sans-serif
+		line-height: 1em
+		@include prefix(transition, .5s linear opacity)
+	
+	&:after 
+		content: attr(px-tooltip)
+		bottom: 100%
+		left: 50%
+		@include prefix(transform, translate(-50%, -.5em))
+		background: $backgroundColor
+		padding: .5em 1em
+		color: $textColor
+		text-shadow: 1px 1px 0 #000
+		white-space: pre
+		-webkit-animation: fadeOutUp-top .2s linear
+	
+	&:before 
+		height: 0
+		width: 0
+		top: 0
+		left: 50%
+		content: ''
+		@include prefix(transform, translate(-50%, -.2em))
+		border: .4em solid transparent
+		border-top-color: $backgroundColor
+		margin: -.4em auto
+	
+	&:hover:after, &:hover:before, &:focus:after, &:focus:before
+		display: block
+		opacity: 1
+	&:hover
+		&:after
+			-webkit-animation: fadeInDown-top .2s linear
+		&:before
+			-webkit-animation: fadeInDown-tip-top .2s linear
