@@ -225,13 +225,15 @@ body {
     border: 0.4em solid transparent;
     border-top-color: rgba(0, 0, 0, 0.8);
     margin: -0.4em auto; }
-  [px-tooltip]:hover:after, [px-tooltip]:hover:before, [px-tooltip]:focus:after, [px-tooltip]:focus:before {
+  [px-tooltip]:not([px-tooltip-trigger="focus"]):hover:after, [px-tooltip]:not([px-tooltip-trigger="focus"]):hover:before, [px-tooltip]:focus:after, [px-tooltip]:focus:before {
     display: block;
     opacity: 1; }
-  [px-tooltip]:hover:after {
+  [px-tooltip]:not([px-tooltip-trigger="focus"]):hover:after, [px-tooltip]:focus:after {
     -webkit-animation: fadeInDown-top 0.2s linear; }
-  [px-tooltip]:hover:before {
+  [px-tooltip]:not([px-tooltip-trigger="focus"]):hover:before, [px-tooltip]:focus:before {
     -webkit-animation: fadeInDown-tip-top 0.2s linear; }
+  [px-tooltip][px-tooltip-trigger="focus"] {
+    outline: none; }
   [px-tooltip][px-tooltip-placement="bottom"]:after {
     bottom: initial;
     top: 100%;
@@ -246,9 +248,9 @@ body {
     -moz-transform: translate(-50%, 0.2em);
     border-color: transparent;
     border-bottom-color: rgba(0, 0, 0, 0.8); }
-  [px-tooltip][px-tooltip-placement="bottom"]:hover:after {
+  [px-tooltip][px-tooltip-placement="bottom"]:not([px-tooltip-trigger="focus"]):hover:after, [px-tooltip][px-tooltip-placement="bottom"]:focus:after {
     -webkit-animation: fadeInDown-bottom 0.2s linear; }
-  [px-tooltip][px-tooltip-placement="bottom"]:hover:before {
+  [px-tooltip][px-tooltip-placement="bottom"]:not([px-tooltip-trigger="focus"]):hover:before, [px-tooltip][px-tooltip-placement="bottom"]:focus:before {
     -webkit-animation: fadeInDown-tip-bottom 0.2s linear; }
   [px-tooltip][px-tooltip-placement="right"]:after, [px-tooltip][px-tooltip-placement="right"]:before {
     left: 100%;
@@ -264,9 +266,9 @@ body {
     -moz-transform: translate(-0.2em, 0);
     border-color: transparent;
     border-right-color: rgba(0, 0, 0, 0.8); }
-  [px-tooltip][px-tooltip-placement="right"]:hover:after {
+  [px-tooltip][px-tooltip-placement="right"]:not([px-tooltip-trigger="focus"]):hover:after, [px-tooltip][px-tooltip-placement="right"]:focus:after {
     -webkit-animation: fadeInDown-right 0.2s linear; }
-  [px-tooltip][px-tooltip-placement="right"]:hover:before {
+  [px-tooltip][px-tooltip-placement="right"]:not([px-tooltip-trigger="focus"]):hover:before, [px-tooltip][px-tooltip-placement="right"]:focus:before {
     -webkit-animation: fadeInDown-tip-right 0.2s linear; }
   [px-tooltip][px-tooltip-placement="left"]:after, [px-tooltip][px-tooltip-placement="left"]:before {
     left: initial;
@@ -283,7 +285,7 @@ body {
     -moz-transform: translate(0.2em, 0);
     border-color: transparent;
     border-left-color: rgba(0, 0, 0, 0.8); }
-  [px-tooltip][px-tooltip-placement="left"]:hover:after {
+  [px-tooltip][px-tooltip-placement="left"]:not([px-tooltip-trigger="focus"]):hover:after, [px-tooltip][px-tooltip-placement="left"]:focus:after {
     -webkit-animation: fadeInDown-left 0.2s linear; }
-  [px-tooltip][px-tooltip-placement="left"]:hover:before {
+  [px-tooltip][px-tooltip-placement="left"]:not([px-tooltip-trigger="focus"]):hover:before, [px-tooltip][px-tooltip-placement="left"]:focus:before {
     -webkit-animation: fadeInDown-tip-left 0.2s linear; }

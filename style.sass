@@ -187,14 +187,18 @@ $textColor: #fff
 		border-top-color: $backgroundColor
 		margin: -.4em auto
 	
-	&:hover:after, &:hover:before, &:focus:after, &:focus:before
-		display: block
-		opacity: 1
-	&:hover
+	&:not([#{$triggerAttr}="focus"]):hover,
+	&:focus
+		&:after, &:before
+			display: block
+			opacity: 1
 		&:after
 			-webkit-animation: fadeInDown-top .2s linear
 		&:before
 			-webkit-animation: fadeInDown-tip-top .2s linear
+
+	&[#{$triggerAttr}="focus"]
+		outline: none
 
 	// tooltip placements
 	&[#{$placementAttr}="bottom"]
@@ -210,7 +214,8 @@ $textColor: #fff
 			border-color: transparent
 			border-bottom-color: $backgroundColor
 
-		&:hover
+		&:not([#{$triggerAttr}="focus"]):hover,
+		&:focus
 			&:after
 				-webkit-animation: fadeInDown-bottom .2s linear
 			&:before
@@ -227,7 +232,8 @@ $textColor: #fff
 			@include prefix(transform, translate( -.2em, 0))
 			border-color: transparent
 			border-right-color: $backgroundColor
-		&:hover
+		&:not([#{$triggerAttr}="focus"]):hover,
+		&:focus
 			&:after
 				-webkit-animation: fadeInDown-right .2s linear
 			&:before
@@ -245,7 +251,8 @@ $textColor: #fff
 			@include prefix(transform, translate(.2em, 0))
 			border-color: transparent
 			border-left-color: $backgroundColor
-		&:hover
+		&:not([#{$triggerAttr}="focus"]):hover,
+		&:focus
 			&:after
 				-webkit-animation: fadeInDown-left .2s linear
 			&:before
