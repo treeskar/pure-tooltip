@@ -1,0 +1,21 @@
+{
+	"name": "pure-tooltips",
+	"version": "0.0.1",
+	"dependencies": {},
+	"devDependencies": {
+		"express": "x",
+		"grunt": "~0.4.2",
+		"grunt-contrib-jshint": "~0.6.3",
+		"grunt-contrib-uglify": "~0.2.2",
+		"grunt-contrib-jade": "x",
+		"grunt-contrib-compass": "x",
+		"grunt-contrib-cssmin": "x",
+		"grunt-contrib-watch": "x",
+		"grunt-nodemon": "x",
+		"grunt-contrib-copy": "x",
+		"grunt-concurrent": "x"
+	},
+	"engines": {
+		"node": ">=0.8.0"
+	}
+}
