@@ -1,0 +1,141 @@
+@import "reset"
+@import "mixin"
+body
+	background: url(../img/bg.png) 0 0 #ddd
+	font-family: Arial, Helvetica, sans-serif
+	p
+		text-align: left
+
+.rtl
+	direction: rtl
+	p
+		text-align: right
+
+#wrapper
+	width: 70%
+	margin: 2em auto
+	text-align: center
+	header
+		//border-bottom: 1px solid #ccc
+		//@include prefix(box-shadow, 0 1px 0 rgba(255,255,255,.8))
+		margin-bottom: 2em
+		h1.tooltip-head
+			display: inline-block
+			position: relative
+			padding: .8em 2em
+			background: rgba(0, 0, 0, 0.8)
+			color: #FFF
+			text-shadow: 1px 1px 0 #000
+			margin: 1em 0
+			font-size: 2em
+			@include prefix(box-shadow, 0 0 1em rgba(0, 0, 0, 0.5))
+			&:before
+				content: ''
+				position: absolute
+				z-index: 1
+				top: 100%
+				left: 50%
+				width: 1em
+				height: 1em
+				background: rgba(0, 0, 0, 0.2)
+				@include prefix(border-radius, 50%)
+				@include prefix(transform, translate(-50%, .5em))
+			&:after
+				content: ''
+				display: block
+				border: 1em solid transparent
+				border-top-color: rgba(0, 0, 0, 0.8)
+				position: absolute
+				z-index: 2
+				left: 50%
+				top: 100%
+				@include prefix(transform, translateX(-50%))
+		nav
+			border-top: 2px solid rgba(23, 59, 151, 0.6)
+			background-color: rgba(23, 59, 151, 0.5)
+			@include prefix(border-radius, 0 0 .3em .3em)
+			@include prefix(box-shadow, 0 0 .5em rgba(0,0,0,.5))
+			ul
+				display: block
+				li
+					list-style: none
+					display: inline-block
+					vertical-align: middle
+					border-right: 1px solid rgba(23, 59, 151, 0.6)
+					border-left: 1px solid rgba(255, 255, 255, 0.4)
+					cursor: pointer
+					@include prefix(transition, .3s ease-in-out background)
+					&:nth-child(1)
+						border-left: none
+					&:nth-last-child(1)
+						border-right: none
+					&:hover, &.active
+						background-color: rgba(255,255,255,.5)
+					&.active
+						cursor: default
+					a
+						padding: .6em 2em
+						color: rgb(23, 59, 151)
+						text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4)
+						font-size: 1.2em
+						text-decoration: none
+						display: block
+
+	article
+		color: #333
+		p
+			font-size: 120%
+			line-height: 160%
+			margin: 1em 0
+		a
+			color: #1443BB
+			text-decoration: none
+			@include prefix(transition, .3s ease-in-out color)
+			&:hover
+				color: #1657FC
+
+		form
+			text-align: left
+			padding: 1em 0
+			border-top: 2px solid #ccc
+			@include prefix(box-shadow, 0 -1px 0 #fff)
+			label
+				font-size: 1em
+				margin: 0 1em
+			input
+				font-size: 1em
+				outline: none
+				padding: .5em 1em
+				border: 2px solid #cccccc
+				&:focus
+					border-color: #6FA6D1
+a.fork
+	display: block
+	position: fixed
+	z-index: 3
+	top: 0
+	right: 0
+	background-color: rgba(23, 59, 151, .9)
+	padding: 1px 0
+	text-decoration: none
+	text-align: center
+	@include prefix(box-shadow, 0 0 1em rgba(0,0,0,.5))
+	border-top: 1px solid #1F186E
+	border-bottom: 1px solid #1F186E
+	@include prefix(transform, rotate(45deg) translate(4em, -0.2em))
+	&:after
+		content: attr(title)
+		display: block
+		font-size: 1em
+		color: #77A4DD
+		text-shadow: 1px 1px .2em #0B0B5C
+		border-top: 2px solid #77A4DD
+		border-bottom: 2px solid #77A4DD
+		padding: 0.5em 3em
+		@include prefix(transition, .2s linear all)
+	&:hover
+		&:after
+			color: #C5D8F0
+			border-color: #AECCF1
+
+@import "pure-tooltip"

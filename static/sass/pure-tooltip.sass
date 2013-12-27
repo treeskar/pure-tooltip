@@ -1,128 +1,7 @@
-@import "reset"
-
-@mixin prefix($name, $arguments)
-	#{$name}: $arguments
-	-webkit-#{$name}: $arguments
-	-moz-#{$name}: $arguments
-	-o-#{$name}: $arguments
-
-@mixin keyframe ($animation_name)
-	@keyframes #{$animation_name}
-		@content
-
-	@-webkit-keyframes #{$animation_name}
-		@content
-
-	@-moz-keyframes #{$animation_name}
-		@content
-
-	@-o-keyframes #{$animation_name}
-		@content
-
-body
-	background: url(img/bg.png) 0 0 #ddd
-	font-family: Arial, Helvetica, sans-serif
-
-#wrapper
-	width: 70%
-	margin: 2em auto
-	text-align: center
-	header
-		border-bottom: 1px solid #ccc
-		@include prefix(box-shadow, 0 1px 0 rgba(255,255,255,.8))
-		margin-bottom: 2em
-		h1.tooltip-head
-			display: inline-block
-			position: relative
-			padding: .8em 2em
-			background: rgba(0, 0, 0, 0.8)
-			color: #FFF
-			text-shadow: 1px 1px 0 #000
-			margin: 1em 0
-			font-size: 2em
-			@include prefix(box-shadow, 0 0 1em rgba(0, 0, 0, 0.5))
-			&:before
-				content: ''
-				position: absolute
-				z-index: 1
-				top: 100%
-				left: 50%
-				width: 1em
-				height: 1em
-				background: rgba(0, 0, 0, 0.2)
-				@include prefix(border-radius, 50%)
-				@include prefix(transform, translate(-50%, .5em))
-			&:after
-				content: ''
-				display: block
-				border: 1em solid transparent
-				border-top-color: rgba(0, 0, 0, 0.8)
-				position: absolute
-				z-index: 2
-				left: 50%
-				top: 100%
-				@include prefix(transform, translateX(-50%))
-	article
-		color: #333
-		p
-			font-size: 120%
-			text-align: left
-			line-height: 160%
-			margin: 1em 0
-		a
-			color: #1443BB
-			text-decoration: none
-			@include prefix(transition, .3s ease-in-out color)
-			&:hover
-				color: #1657FC
-
-		form
-			text-align: left
-			padding: 1em 0
-			border-top: 2px solid #ccc
-			@include prefix(box-shadow, 0 -1px 0 #fff)
-			label
-				font-size: 1em
-				margin: 0 1em
-			input
-				font-size: 1em
-				outline: none
-				padding: .5em 1em
-				border: 2px solid #cccccc
-				&:focus
-					border-color: #6FA6D1
-a.fork
-	display: block
-	position: fixed
-	z-index: 3
-	top: 0
-	right: 0
-	background-color: rgba(23, 59, 151, .9)
-	padding: 1px 0
-	text-decoration: none
-	text-align: center
-	@include prefix(box-shadow, 0 0 1em rgba(0,0,0,.5))
-	border-top: 1px solid #1F186E
-	border-bottom: 1px solid #1F186E
-	@include prefix(transform, rotate(45deg) translate(4em, -0.2em))
-	&:after
-		content: attr(title)
-		display: block
-		font-size: 1em
-		color: #77A4DD
-		text-shadow: 1px 1px .2em #0B0B5C
-		border-top: 2px solid #77A4DD
-		border-bottom: 2px solid #77A4DD
-		padding: 0.5em 3em
-		@include prefix(transition, .2s linear all)
-	&:hover
-		&:after
-			color: #C5D8F0
-			border-color: #AECCF1
+@import "mixin"
 
 // Animations
-
-// top tooltip animation
+	// top tooltip animation
 @include keyframe(fadeInDown-top)
 	0%
 		opacity: 0
@@ -280,13 +159,13 @@ $textColor: #fff
 	// tooltip placements
 	&[#{$placementAttr}="bottom"]
 		&:after 
-			bottom: initial
+			bottom: inherit
 			top: 100%
 			@include prefix(transform, translate(-50%, .5em))
 		
 		&:before
-			top: initial
-			bottom: 0
+			bottom: inherit
+			top: 100%
 			@include prefix(transform, translate(-50%, .2em))
 			border-color: transparent
 			border-bottom-color: $backgroundColor
@@ -298,10 +177,10 @@ $textColor: #fff
 			&:before
 				@include prefix(animation, fadeInDown-tip-bottom .2s linear)
 
-	&[#{$placementAttr}="right"]
+	&[#{$placementAttr}="right"], &[#{$placementAttr}="after"]
 		&:after, &:before
 			left: 100%
-			bottom: initial
+			bottom: inherit
 			top: 50%
 		&:after
 			@include prefix(transform, translate( .5em, -50%))
@@ -316,10 +195,51 @@ $textColor: #fff
 			&:before
 				@include prefix(animation, fadeInDown-tip-right .2s linear)
 
-	&[#{$placementAttr}="left"]
+	&[#{$placementAttr}="left"], &[#{$placementAttr}="before"]
 		&:after, &:before
-			left: initial
-			bottom: initial
+			left: inherit
+			bottom: inherit
+			right: 100%
+			top: 50%
+		&:after
+			@include prefix(transform, translate(-.5em, -50%))
+		&:before
+			@include prefix(transform, translate(.2em, 0))
+			border-color: transparent
+			border-left-color: $backgroundColor
+		&:not([#{$triggerAttr}="focus"]):hover,
+		&:focus
+			&:after
+				@include prefix(animation, fadeInDown-left .2s linear)
+			&:before
+				@include prefix(animation, fadeInDown-tip-left .2s linear)
+
+
+// you mast use .rtl tag for
+.rtl [#{$tooltipAttr}]
+	&[#{$placementAttr}="before" ]
+		&:after, &:before
+			left: 100%
+			bottom: inherit
+			right: inherit
+			top: 50%
+		&:after
+			@include prefix(transform, translate( .5em, -50%))
+		&:before
+			@include prefix(transform, translate( -.2em, 0))
+			border-color: transparent
+			border-right-color: $backgroundColor
+		&:not([#{$triggerAttr}="focus"]):hover,
+		&:focus
+			&:after
+				@include prefix(animation, fadeInDown-right .2s linear)
+			&:before
+				@include prefix(animation, fadeInDown-tip-right .2s linear)
+
+	&[#{$placementAttr}="after"]
+		&:after, &:before
+			left: inherit
+			bottom: inherit
 			right: 100%
 			top: 50%
 		&:after

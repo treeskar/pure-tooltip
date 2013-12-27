@@ -1,0 +1,1270 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+/* line 5, ../sass/reset.sass */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, ../sass/reset.sass */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, ../sass/reset.sass */
+body {
+  line-height: 1;
+}
+
+/* line 33, ../sass/reset.sass */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, ../sass/reset.sass */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, ../sass/reset.sass */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 44, ../sass/reset.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 3, ../sass/style.sass */
+body {
+  background: url(../img/bg.png) 0 0 #dddddd;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* line 6, ../sass/style.sass */
+body p {
+  text-align: left;
+}
+
+/* line 9, ../sass/style.sass */
+.rtl {
+  direction: rtl;
+}
+/* line 11, ../sass/style.sass */
+.rtl p {
+  text-align: right;
+}
+
+/* line 14, ../sass/style.sass */
+#wrapper {
+  width: 70%;
+  margin: 2em auto;
+  text-align: center;
+}
+/* line 18, ../sass/style.sass */
+#wrapper header {
+  margin-bottom: 2em;
+}
+/* line 22, ../sass/style.sass */
+#wrapper header h1.tooltip-head {
+  display: inline-block;
+  position: relative;
+  padding: 0.8em 2em;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-shadow: 1px 1px 0 black;
+  margin: 1em 0;
+  font-size: 2em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+}
+/* line 32, ../sass/style.sass */
+#wrapper header h1.tooltip-head:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  transform: translate(-50%, 0.5em);
+  -webkit-transform: translate(-50%, 0.5em);
+  -moz-transform: translate(-50%, 0.5em);
+  -o-transform: translate(-50%, 0.5em);
+}
+/* line 43, ../sass/style.sass */
+#wrapper header h1.tooltip-head:after {
+  content: "";
+  display: block;
+  border: 1em solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+/* line 53, ../sass/style.sass */
+#wrapper header nav {
+  border-top: 2px solid rgba(23, 59, 151, 0.6);
+  background-color: rgba(23, 59, 151, 0.5);
+  border-radius: 0 0 0.3em 0.3em;
+  -webkit-border-radius: 0 0 0.3em 0.3em;
+  -moz-border-radius: 0 0 0.3em 0.3em;
+  -o-border-radius: 0 0 0.3em 0.3em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+}
+/* line 58, ../sass/style.sass */
+#wrapper header nav ul {
+  display: block;
+}
+/* line 60, ../sass/style.sass */
+#wrapper header nav ul li {
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  border-right: 1px solid rgba(23, 59, 151, 0.6);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s ease-in-out background;
+  -webkit-transition: 0.3s ease-in-out background;
+  -moz-transition: 0.3s ease-in-out background;
+  -o-transition: 0.3s ease-in-out background;
+}
+/* line 68, ../sass/style.sass */
+#wrapper header nav ul li:nth-child(1) {
+  border-left: none;
+}
+/* line 70, ../sass/style.sass */
+#wrapper header nav ul li:nth-last-child(1) {
+  border-right: none;
+}
+/* line 72, ../sass/style.sass */
+#wrapper header nav ul li:hover, #wrapper header nav ul li.active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 74, ../sass/style.sass */
+#wrapper header nav ul li.active {
+  cursor: default;
+}
+/* line 76, ../sass/style.sass */
+#wrapper header nav ul li a {
+  padding: 0.6em 2em;
+  color: #173b97;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  font-size: 1.2em;
+  text-decoration: none;
+  display: block;
+}
+/* line 84, ../sass/style.sass */
+#wrapper article {
+  color: #333333;
+}
+/* line 86, ../sass/style.sass */
+#wrapper article p {
+  font-size: 120%;
+  line-height: 160%;
+  margin: 1em 0;
+}
+/* line 90, ../sass/style.sass */
+#wrapper article a {
+  color: #1443bb;
+  text-decoration: none;
+  transition: 0.3s ease-in-out color;
+  -webkit-transition: 0.3s ease-in-out color;
+  -moz-transition: 0.3s ease-in-out color;
+  -o-transition: 0.3s ease-in-out color;
+}
+/* line 94, ../sass/style.sass */
+#wrapper article a:hover {
+  color: #1657fc;
+}
+/* line 97, ../sass/style.sass */
+#wrapper article form {
+  text-align: left;
+  padding: 1em 0;
+  border-top: 2px solid #cccccc;
+  box-shadow: 0 -1px 0 white;
+  -webkit-box-shadow: 0 -1px 0 white;
+  -moz-box-shadow: 0 -1px 0 white;
+  -o-box-shadow: 0 -1px 0 white;
+}
+/* line 102, ../sass/style.sass */
+#wrapper article form label {
+  font-size: 1em;
+  margin: 0 1em;
+}
+/* line 105, ../sass/style.sass */
+#wrapper article form input {
+  font-size: 1em;
+  outline: none;
+  padding: 0.5em 1em;
+  border: 2px solid #cccccc;
+}
+/* line 110, ../sass/style.sass */
+#wrapper article form input:focus {
+  border-color: #6fa6d1;
+}
+
+/* line 112, ../sass/style.sass */
+a.fork {
+  display: block;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background-color: rgba(23, 59, 151, 0.9);
+  padding: 1px 0;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #1f186e;
+  border-bottom: 1px solid #1f186e;
+  transform: rotate(45deg) translate(4em, -0.2em);
+  -webkit-transform: rotate(45deg) translate(4em, -0.2em);
+  -moz-transform: rotate(45deg) translate(4em, -0.2em);
+  -o-transform: rotate(45deg) translate(4em, -0.2em);
+}
+/* line 126, ../sass/style.sass */
+a.fork:after {
+  content: attr(title);
+  display: block;
+  font-size: 1em;
+  color: #77a4dd;
+  text-shadow: 1px 1px 0.2em #0b0b5c;
+  border-top: 2px solid #77a4dd;
+  border-bottom: 2px solid #77a4dd;
+  padding: 0.5em 3em;
+  transition: 0.2s linear all;
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
+  -o-transition: 0.2s linear all;
+}
+/* line 137, ../sass/style.sass */
+a.fork:hover:after {
+  color: #c5d8f0;
+  border-color: #aeccf1;
+}
+
+@keyframes fadeInDown-top {
+  /* line 6, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, -1.5em);
+    -webkit-transform: translate(-50%, -1.5em);
+    -moz-transform: translate(-50%, -1.5em);
+    -o-transform: translate(-50%, -1.5em);
+  }
+
+  /* line 10, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -0.5em);
+    -webkit-transform: translate(-50%, -0.5em);
+    -moz-transform: translate(-50%, -0.5em);
+    -o-transform: translate(-50%, -0.5em);
+  }
+}
+
+@-webkit-keyframes fadeInDown-top {
+  /* line 6, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, -1.5em);
+    -webkit-transform: translate(-50%, -1.5em);
+    -moz-transform: translate(-50%, -1.5em);
+    -o-transform: translate(-50%, -1.5em);
+  }
+
+  /* line 10, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -0.5em);
+    -webkit-transform: translate(-50%, -0.5em);
+    -moz-transform: translate(-50%, -0.5em);
+    -o-transform: translate(-50%, -0.5em);
+  }
+}
+
+@-moz-keyframes fadeInDown-top {
+  /* line 6, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, -1.5em);
+    -webkit-transform: translate(-50%, -1.5em);
+    -moz-transform: translate(-50%, -1.5em);
+    -o-transform: translate(-50%, -1.5em);
+  }
+
+  /* line 10, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -0.5em);
+    -webkit-transform: translate(-50%, -0.5em);
+    -moz-transform: translate(-50%, -0.5em);
+    -o-transform: translate(-50%, -0.5em);
+  }
+}
+
+@-o-keyframes fadeInDown-top {
+  /* line 6, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, -1.5em);
+    -webkit-transform: translate(-50%, -1.5em);
+    -moz-transform: translate(-50%, -1.5em);
+    -o-transform: translate(-50%, -1.5em);
+  }
+
+  /* line 10, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -0.5em);
+    -webkit-transform: translate(-50%, -0.5em);
+    -moz-transform: translate(-50%, -0.5em);
+    -o-transform: translate(-50%, -0.5em);
+  }
+}
+
+@keyframes fadeInDown-tip-top {
+  /* line 16, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, -1.2em);
+    -webkit-transform: translate(-50%, -1.2em);
+    -moz-transform: translate(-50%, -1.2em);
+    -o-transform: translate(-50%, -1.2em);
+  }
+
+  /* line 20, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -0.2em);
+    -webkit-transform: translate(-50%, -0.2em);
+    -moz-transform: translate(-50%, -0.2em);
+    -o-transform: translate(-50%, -0.2em);
+  }
+}
+
+@-webkit-keyframes fadeInDown-tip-top {
+  /* line 16, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, -1.2em);
+    -webkit-transform: translate(-50%, -1.2em);
+    -moz-transform: translate(-50%, -1.2em);
+    -o-transform: translate(-50%, -1.2em);
+  }
+
+  /* line 20, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -0.2em);
+    -webkit-transform: translate(-50%, -0.2em);
+    -moz-transform: translate(-50%, -0.2em);
+    -o-transform: translate(-50%, -0.2em);
+  }
+}
+
+@-moz-keyframes fadeInDown-tip-top {
+  /* line 16, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, -1.2em);
+    -webkit-transform: translate(-50%, -1.2em);
+    -moz-transform: translate(-50%, -1.2em);
+    -o-transform: translate(-50%, -1.2em);
+  }
+
+  /* line 20, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -0.2em);
+    -webkit-transform: translate(-50%, -0.2em);
+    -moz-transform: translate(-50%, -0.2em);
+    -o-transform: translate(-50%, -0.2em);
+  }
+}
+
+@-o-keyframes fadeInDown-tip-top {
+  /* line 16, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, -1.2em);
+    -webkit-transform: translate(-50%, -1.2em);
+    -moz-transform: translate(-50%, -1.2em);
+    -o-transform: translate(-50%, -1.2em);
+  }
+
+  /* line 20, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, -0.2em);
+    -webkit-transform: translate(-50%, -0.2em);
+    -moz-transform: translate(-50%, -0.2em);
+    -o-transform: translate(-50%, -0.2em);
+  }
+}
+
+@keyframes fadeInDown-bottom {
+  /* line 27, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, 1.5em);
+    -webkit-transform: translate(-50%, 1.5em);
+    -moz-transform: translate(-50%, 1.5em);
+    -o-transform: translate(-50%, 1.5em);
+  }
+
+  /* line 31, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, 0.5em);
+    -webkit-transform: translate(-50%, 0.5em);
+    -moz-transform: translate(-50%, 0.5em);
+    -o-transform: translate(-50%, 0.5em);
+  }
+}
+
+@-webkit-keyframes fadeInDown-bottom {
+  /* line 27, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, 1.5em);
+    -webkit-transform: translate(-50%, 1.5em);
+    -moz-transform: translate(-50%, 1.5em);
+    -o-transform: translate(-50%, 1.5em);
+  }
+
+  /* line 31, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, 0.5em);
+    -webkit-transform: translate(-50%, 0.5em);
+    -moz-transform: translate(-50%, 0.5em);
+    -o-transform: translate(-50%, 0.5em);
+  }
+}
+
+@-moz-keyframes fadeInDown-bottom {
+  /* line 27, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, 1.5em);
+    -webkit-transform: translate(-50%, 1.5em);
+    -moz-transform: translate(-50%, 1.5em);
+    -o-transform: translate(-50%, 1.5em);
+  }
+
+  /* line 31, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, 0.5em);
+    -webkit-transform: translate(-50%, 0.5em);
+    -moz-transform: translate(-50%, 0.5em);
+    -o-transform: translate(-50%, 0.5em);
+  }
+}
+
+@-o-keyframes fadeInDown-bottom {
+  /* line 27, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, 1.5em);
+    -webkit-transform: translate(-50%, 1.5em);
+    -moz-transform: translate(-50%, 1.5em);
+    -o-transform: translate(-50%, 1.5em);
+  }
+
+  /* line 31, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, 0.5em);
+    -webkit-transform: translate(-50%, 0.5em);
+    -moz-transform: translate(-50%, 0.5em);
+    -o-transform: translate(-50%, 0.5em);
+  }
+}
+
+@keyframes fadeInDown-tip-bottom {
+  /* line 37, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, 1.2em);
+    -webkit-transform: translate(-50%, 1.2em);
+    -moz-transform: translate(-50%, 1.2em);
+    -o-transform: translate(-50%, 1.2em);
+  }
+
+  /* line 41, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, 0.2em);
+    -webkit-transform: translate(-50%, 0.2em);
+    -moz-transform: translate(-50%, 0.2em);
+    -o-transform: translate(-50%, 0.2em);
+  }
+}
+
+@-webkit-keyframes fadeInDown-tip-bottom {
+  /* line 37, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, 1.2em);
+    -webkit-transform: translate(-50%, 1.2em);
+    -moz-transform: translate(-50%, 1.2em);
+    -o-transform: translate(-50%, 1.2em);
+  }
+
+  /* line 41, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, 0.2em);
+    -webkit-transform: translate(-50%, 0.2em);
+    -moz-transform: translate(-50%, 0.2em);
+    -o-transform: translate(-50%, 0.2em);
+  }
+}
+
+@-moz-keyframes fadeInDown-tip-bottom {
+  /* line 37, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, 1.2em);
+    -webkit-transform: translate(-50%, 1.2em);
+    -moz-transform: translate(-50%, 1.2em);
+    -o-transform: translate(-50%, 1.2em);
+  }
+
+  /* line 41, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, 0.2em);
+    -webkit-transform: translate(-50%, 0.2em);
+    -moz-transform: translate(-50%, 0.2em);
+    -o-transform: translate(-50%, 0.2em);
+  }
+}
+
+@-o-keyframes fadeInDown-tip-bottom {
+  /* line 37, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, 1.2em);
+    -webkit-transform: translate(-50%, 1.2em);
+    -moz-transform: translate(-50%, 1.2em);
+    -o-transform: translate(-50%, 1.2em);
+  }
+
+  /* line 41, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-50%, 0.2em);
+    -webkit-transform: translate(-50%, 0.2em);
+    -moz-transform: translate(-50%, 0.2em);
+    -o-transform: translate(-50%, 0.2em);
+  }
+}
+
+@keyframes fadeInDown-right {
+  /* line 48, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(1.5em, -50%);
+    -webkit-transform: translate(1.5em, -50%);
+    -moz-transform: translate(1.5em, -50%);
+    -o-transform: translate(1.5em, -50%);
+  }
+
+  /* line 52, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.5em, -50%);
+    -webkit-transform: translate(0.5em, -50%);
+    -moz-transform: translate(0.5em, -50%);
+    -o-transform: translate(0.5em, -50%);
+  }
+}
+
+@-webkit-keyframes fadeInDown-right {
+  /* line 48, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(1.5em, -50%);
+    -webkit-transform: translate(1.5em, -50%);
+    -moz-transform: translate(1.5em, -50%);
+    -o-transform: translate(1.5em, -50%);
+  }
+
+  /* line 52, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.5em, -50%);
+    -webkit-transform: translate(0.5em, -50%);
+    -moz-transform: translate(0.5em, -50%);
+    -o-transform: translate(0.5em, -50%);
+  }
+}
+
+@-moz-keyframes fadeInDown-right {
+  /* line 48, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(1.5em, -50%);
+    -webkit-transform: translate(1.5em, -50%);
+    -moz-transform: translate(1.5em, -50%);
+    -o-transform: translate(1.5em, -50%);
+  }
+
+  /* line 52, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.5em, -50%);
+    -webkit-transform: translate(0.5em, -50%);
+    -moz-transform: translate(0.5em, -50%);
+    -o-transform: translate(0.5em, -50%);
+  }
+}
+
+@-o-keyframes fadeInDown-right {
+  /* line 48, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(1.5em, -50%);
+    -webkit-transform: translate(1.5em, -50%);
+    -moz-transform: translate(1.5em, -50%);
+    -o-transform: translate(1.5em, -50%);
+  }
+
+  /* line 52, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.5em, -50%);
+    -webkit-transform: translate(0.5em, -50%);
+    -moz-transform: translate(0.5em, -50%);
+    -o-transform: translate(0.5em, -50%);
+  }
+}
+
+@keyframes fadeInDown-tip-right {
+  /* line 58, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(0.8em, 0);
+    -webkit-transform: translate(0.8em, 0);
+    -moz-transform: translate(0.8em, 0);
+    -o-transform: translate(0.8em, 0);
+  }
+
+  /* line 62, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.2em, 0);
+    -webkit-transform: translate(0.2em, 0);
+    -moz-transform: translate(0.2em, 0);
+    -o-transform: translate(0.2em, 0);
+  }
+}
+
+@-webkit-keyframes fadeInDown-tip-right {
+  /* line 58, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(0.8em, 0);
+    -webkit-transform: translate(0.8em, 0);
+    -moz-transform: translate(0.8em, 0);
+    -o-transform: translate(0.8em, 0);
+  }
+
+  /* line 62, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.2em, 0);
+    -webkit-transform: translate(0.2em, 0);
+    -moz-transform: translate(0.2em, 0);
+    -o-transform: translate(0.2em, 0);
+  }
+}
+
+@-moz-keyframes fadeInDown-tip-right {
+  /* line 58, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(0.8em, 0);
+    -webkit-transform: translate(0.8em, 0);
+    -moz-transform: translate(0.8em, 0);
+    -o-transform: translate(0.8em, 0);
+  }
+
+  /* line 62, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.2em, 0);
+    -webkit-transform: translate(0.2em, 0);
+    -moz-transform: translate(0.2em, 0);
+    -o-transform: translate(0.2em, 0);
+  }
+}
+
+@-o-keyframes fadeInDown-tip-right {
+  /* line 58, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(0.8em, 0);
+    -webkit-transform: translate(0.8em, 0);
+    -moz-transform: translate(0.8em, 0);
+    -o-transform: translate(0.8em, 0);
+  }
+
+  /* line 62, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.2em, 0);
+    -webkit-transform: translate(0.2em, 0);
+    -moz-transform: translate(0.2em, 0);
+    -o-transform: translate(0.2em, 0);
+  }
+}
+
+@keyframes fadeInDown-left {
+  /* line 69, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-1.5em, -50%);
+    -webkit-transform: translate(-1.5em, -50%);
+    -moz-transform: translate(-1.5em, -50%);
+    -o-transform: translate(-1.5em, -50%);
+  }
+
+  /* line 73, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-0.5em, -50%);
+    -webkit-transform: translate(-0.5em, -50%);
+    -moz-transform: translate(-0.5em, -50%);
+    -o-transform: translate(-0.5em, -50%);
+  }
+}
+
+@-webkit-keyframes fadeInDown-left {
+  /* line 69, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-1.5em, -50%);
+    -webkit-transform: translate(-1.5em, -50%);
+    -moz-transform: translate(-1.5em, -50%);
+    -o-transform: translate(-1.5em, -50%);
+  }
+
+  /* line 73, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-0.5em, -50%);
+    -webkit-transform: translate(-0.5em, -50%);
+    -moz-transform: translate(-0.5em, -50%);
+    -o-transform: translate(-0.5em, -50%);
+  }
+}
+
+@-moz-keyframes fadeInDown-left {
+  /* line 69, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-1.5em, -50%);
+    -webkit-transform: translate(-1.5em, -50%);
+    -moz-transform: translate(-1.5em, -50%);
+    -o-transform: translate(-1.5em, -50%);
+  }
+
+  /* line 73, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-0.5em, -50%);
+    -webkit-transform: translate(-0.5em, -50%);
+    -moz-transform: translate(-0.5em, -50%);
+    -o-transform: translate(-0.5em, -50%);
+  }
+}
+
+@-o-keyframes fadeInDown-left {
+  /* line 69, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-1.5em, -50%);
+    -webkit-transform: translate(-1.5em, -50%);
+    -moz-transform: translate(-1.5em, -50%);
+    -o-transform: translate(-1.5em, -50%);
+  }
+
+  /* line 73, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(-0.5em, -50%);
+    -webkit-transform: translate(-0.5em, -50%);
+    -moz-transform: translate(-0.5em, -50%);
+    -o-transform: translate(-0.5em, -50%);
+  }
+}
+
+@keyframes fadeInDown-tip-left {
+  /* line 79, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-0.8em, 0);
+    -webkit-transform: translate(-0.8em, 0);
+    -moz-transform: translate(-0.8em, 0);
+    -o-transform: translate(-0.8em, 0);
+  }
+
+  /* line 83, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.2em, 0);
+    -webkit-transform: translate(0.2em, 0);
+    -moz-transform: translate(0.2em, 0);
+    -o-transform: translate(0.2em, 0);
+  }
+}
+
+@-webkit-keyframes fadeInDown-tip-left {
+  /* line 79, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-0.8em, 0);
+    -webkit-transform: translate(-0.8em, 0);
+    -moz-transform: translate(-0.8em, 0);
+    -o-transform: translate(-0.8em, 0);
+  }
+
+  /* line 83, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.2em, 0);
+    -webkit-transform: translate(0.2em, 0);
+    -moz-transform: translate(0.2em, 0);
+    -o-transform: translate(0.2em, 0);
+  }
+}
+
+@-moz-keyframes fadeInDown-tip-left {
+  /* line 79, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-0.8em, 0);
+    -webkit-transform: translate(-0.8em, 0);
+    -moz-transform: translate(-0.8em, 0);
+    -o-transform: translate(-0.8em, 0);
+  }
+
+  /* line 83, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.2em, 0);
+    -webkit-transform: translate(0.2em, 0);
+    -moz-transform: translate(0.2em, 0);
+    -o-transform: translate(0.2em, 0);
+  }
+}
+
+@-o-keyframes fadeInDown-tip-left {
+  /* line 79, ../sass/pure-tooltip.sass */
+  0% {
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-0.8em, 0);
+    -webkit-transform: translate(-0.8em, 0);
+    -moz-transform: translate(-0.8em, 0);
+    -o-transform: translate(-0.8em, 0);
+  }
+
+  /* line 83, ../sass/pure-tooltip.sass */
+  100% {
+    opacity: 1;
+    z-index: 100;
+    transform: translate(0.2em, 0);
+    -webkit-transform: translate(0.2em, 0);
+    -moz-transform: translate(0.2em, 0);
+    -o-transform: translate(0.2em, 0);
+  }
+}
+
+@-webkit-keyframes fadeOutUp-top {
+  /* line 90, ../sass/pure-tooltip.sass */
+  0% {
+    display: block;
+  }
+
+  /* line 92, ../sass/pure-tooltip.sass */
+  1% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -0.5em);
+  }
+
+  /* line 95, ../sass/pure-tooltip.sass */
+  99% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -1.5em);
+  }
+
+  /* line 98, ../sass/pure-tooltip.sass */
+  100% {
+    display: none;
+  }
+}
+
+/* line 108, ../sass/pure-tooltip.sass */
+[tooltip] {
+  position: relative;
+}
+/* line 111, ../sass/pure-tooltip.sass */
+[tooltip]:hover, [tooltip]:focus {
+  overflow: visible;
+  z-index: 10;
+}
+/* line 116, ../sass/pure-tooltip.sass */
+[tooltip]:after, [tooltip]:before {
+  position: absolute;
+  display: none;
+  opacity: 0;
+  font: normal 0.8em Arial, Helvetica, sans-serif;
+  line-height: 1em;
+  transition: 0.5s linear opacity;
+  -webkit-transition: 0.5s linear opacity;
+  -moz-transition: 0.5s linear opacity;
+  -o-transition: 0.5s linear opacity;
+}
+/* line 124, ../sass/pure-tooltip.sass */
+[tooltip]:after {
+  content: attr(tooltip);
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -0.5em);
+  -webkit-transform: translate(-50%, -0.5em);
+  -moz-transform: translate(-50%, -0.5em);
+  -o-transform: translate(-50%, -0.5em);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5em 1em;
+  color: white;
+  text-shadow: 1px 1px 0 black;
+  white-space: pre;
+}
+/* line 135, ../sass/pure-tooltip.sass */
+[tooltip]:before {
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 50%;
+  content: "";
+  transform: translate(-50%, -0.2em);
+  -webkit-transform: translate(-50%, -0.2em);
+  -moz-transform: translate(-50%, -0.2em);
+  -o-transform: translate(-50%, -0.2em);
+  border: 0.4em solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.8);
+  margin: -0.4em auto;
+}
+/* line 148, ../sass/pure-tooltip.sass */
+[tooltip]:not([tooltip-trigger="focus"]):hover:after, [tooltip]:not([tooltip-trigger="focus"]):hover:before, [tooltip]:focus:after, [tooltip]:focus:before {
+  display: block;
+  opacity: 1;
+}
+/* line 151, ../sass/pure-tooltip.sass */
+[tooltip]:not([tooltip-trigger="focus"]):hover:after, [tooltip]:focus:after {
+  animation: fadeInDown-top 0.2s linear;
+  -webkit-animation: fadeInDown-top 0.2s linear;
+  -moz-animation: fadeInDown-top 0.2s linear;
+  -o-animation: fadeInDown-top 0.2s linear;
+}
+/* line 153, ../sass/pure-tooltip.sass */
+[tooltip]:not([tooltip-trigger="focus"]):hover:before, [tooltip]:focus:before {
+  animation: fadeInDown-tip-top 0.2s linear;
+  -webkit-animation: fadeInDown-tip-top 0.2s linear;
+  -moz-animation: fadeInDown-tip-top 0.2s linear;
+  -o-animation: fadeInDown-tip-top 0.2s linear;
+}
+/* line 156, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-trigger="focus"] {
+  outline: none;
+}
+/* line 161, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="bottom"]:after {
+  bottom: inherit;
+  top: 100%;
+  transform: translate(-50%, 0.5em);
+  -webkit-transform: translate(-50%, 0.5em);
+  -moz-transform: translate(-50%, 0.5em);
+  -o-transform: translate(-50%, 0.5em);
+}
+/* line 166, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="bottom"]:before {
+  bottom: inherit;
+  top: 100%;
+  transform: translate(-50%, 0.2em);
+  -webkit-transform: translate(-50%, 0.2em);
+  -moz-transform: translate(-50%, 0.2em);
+  -o-transform: translate(-50%, 0.2em);
+  border-color: transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+}
+/* line 175, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="bottom"]:not([tooltip-trigger="focus"]):hover:after, [tooltip][tooltip-placement="bottom"]:focus:after {
+  animation: fadeInDown-bottom 0.2s linear;
+  -webkit-animation: fadeInDown-bottom 0.2s linear;
+  -moz-animation: fadeInDown-bottom 0.2s linear;
+  -o-animation: fadeInDown-bottom 0.2s linear;
+}
+/* line 177, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="bottom"]:not([tooltip-trigger="focus"]):hover:before, [tooltip][tooltip-placement="bottom"]:focus:before {
+  animation: fadeInDown-tip-bottom 0.2s linear;
+  -webkit-animation: fadeInDown-tip-bottom 0.2s linear;
+  -moz-animation: fadeInDown-tip-bottom 0.2s linear;
+  -o-animation: fadeInDown-tip-bottom 0.2s linear;
+}
+/* line 181, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="right"]:after, [tooltip][tooltip-placement="right"]:before, [tooltip][tooltip-placement="after"]:after, [tooltip][tooltip-placement="after"]:before {
+  left: 100%;
+  bottom: inherit;
+  top: 50%;
+}
+/* line 185, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="right"]:after, [tooltip][tooltip-placement="after"]:after {
+  transform: translate(0.5em, -50%);
+  -webkit-transform: translate(0.5em, -50%);
+  -moz-transform: translate(0.5em, -50%);
+  -o-transform: translate(0.5em, -50%);
+}
+/* line 187, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="right"]:before, [tooltip][tooltip-placement="after"]:before {
+  transform: translate(-0.2em, 0);
+  -webkit-transform: translate(-0.2em, 0);
+  -moz-transform: translate(-0.2em, 0);
+  -o-transform: translate(-0.2em, 0);
+  border-color: transparent;
+  border-right-color: rgba(0, 0, 0, 0.8);
+}
+/* line 193, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="right"]:not([tooltip-trigger="focus"]):hover:after, [tooltip][tooltip-placement="right"]:focus:after, [tooltip][tooltip-placement="after"]:not([tooltip-trigger="focus"]):hover:after, [tooltip][tooltip-placement="after"]:focus:after {
+  animation: fadeInDown-right 0.2s linear;
+  -webkit-animation: fadeInDown-right 0.2s linear;
+  -moz-animation: fadeInDown-right 0.2s linear;
+  -o-animation: fadeInDown-right 0.2s linear;
+}
+/* line 195, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="right"]:not([tooltip-trigger="focus"]):hover:before, [tooltip][tooltip-placement="right"]:focus:before, [tooltip][tooltip-placement="after"]:not([tooltip-trigger="focus"]):hover:before, [tooltip][tooltip-placement="after"]:focus:before {
+  animation: fadeInDown-tip-right 0.2s linear;
+  -webkit-animation: fadeInDown-tip-right 0.2s linear;
+  -moz-animation: fadeInDown-tip-right 0.2s linear;
+  -o-animation: fadeInDown-tip-right 0.2s linear;
+}
+/* line 199, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="left"]:after, [tooltip][tooltip-placement="left"]:before, [tooltip][tooltip-placement="before"]:after, [tooltip][tooltip-placement="before"]:before {
+  left: inherit;
+  bottom: inherit;
+  right: 100%;
+  top: 50%;
+}
+/* line 204, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="left"]:after, [tooltip][tooltip-placement="before"]:after {
+  transform: translate(-0.5em, -50%);
+  -webkit-transform: translate(-0.5em, -50%);
+  -moz-transform: translate(-0.5em, -50%);
+  -o-transform: translate(-0.5em, -50%);
+}
+/* line 206, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="left"]:before, [tooltip][tooltip-placement="before"]:before {
+  transform: translate(0.2em, 0);
+  -webkit-transform: translate(0.2em, 0);
+  -moz-transform: translate(0.2em, 0);
+  -o-transform: translate(0.2em, 0);
+  border-color: transparent;
+  border-left-color: rgba(0, 0, 0, 0.8);
+}
+/* line 212, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="left"]:not([tooltip-trigger="focus"]):hover:after, [tooltip][tooltip-placement="left"]:focus:after, [tooltip][tooltip-placement="before"]:not([tooltip-trigger="focus"]):hover:after, [tooltip][tooltip-placement="before"]:focus:after {
+  animation: fadeInDown-left 0.2s linear;
+  -webkit-animation: fadeInDown-left 0.2s linear;
+  -moz-animation: fadeInDown-left 0.2s linear;
+  -o-animation: fadeInDown-left 0.2s linear;
+}
+/* line 214, ../sass/pure-tooltip.sass */
+[tooltip][tooltip-placement="left"]:not([tooltip-trigger="focus"]):hover:before, [tooltip][tooltip-placement="left"]:focus:before, [tooltip][tooltip-placement="before"]:not([tooltip-trigger="focus"]):hover:before, [tooltip][tooltip-placement="before"]:focus:before {
+  animation: fadeInDown-tip-left 0.2s linear;
+  -webkit-animation: fadeInDown-tip-left 0.2s linear;
+  -moz-animation: fadeInDown-tip-left 0.2s linear;
+  -o-animation: fadeInDown-tip-left 0.2s linear;
+}
+
+/* line 221, ../sass/pure-tooltip.sass */
+.rtl [tooltip][tooltip-placement="before"]:after, .rtl [tooltip][tooltip-placement="before"]:before {
+  left: 100%;
+  bottom: inherit;
+  right: inherit;
+  top: 50%;
+}
+/* line 226, ../sass/pure-tooltip.sass */
+.rtl [tooltip][tooltip-placement="before"]:after {
+  transform: translate(0.5em, -50%);
+  -webkit-transform: translate(0.5em, -50%);
+  -moz-transform: translate(0.5em, -50%);
+  -o-transform: translate(0.5em, -50%);
+}
+/* line 228, ../sass/pure-tooltip.sass */
+.rtl [tooltip][tooltip-placement="before"]:before {
+  transform: translate(-0.2em, 0);
+  -webkit-transform: translate(-0.2em, 0);
+  -moz-transform: translate(-0.2em, 0);
+  -o-transform: translate(-0.2em, 0);
+  border-color: transparent;
+  border-right-color: rgba(0, 0, 0, 0.8);
+}
+/* line 234, ../sass/pure-tooltip.sass */
+.rtl [tooltip][tooltip-placement="before"]:not([tooltip-trigger="focus"]):hover:after, .rtl [tooltip][tooltip-placement="before"]:focus:after {
+  animation: fadeInDown-right 0.2s linear;
+  -webkit-animation: fadeInDown-right 0.2s linear;
+  -moz-animation: fadeInDown-right 0.2s linear;
+  -o-animation: fadeInDown-right 0.2s linear;
+}
+/* line 236, ../sass/pure-tooltip.sass */
+.rtl [tooltip][tooltip-placement="before"]:not([tooltip-trigger="focus"]):hover:before, .rtl [tooltip][tooltip-placement="before"]:focus:before {
+  animation: fadeInDown-tip-right 0.2s linear;
+  -webkit-animation: fadeInDown-tip-right 0.2s linear;
+  -moz-animation: fadeInDown-tip-right 0.2s linear;
+  -o-animation: fadeInDown-tip-right 0.2s linear;
+}
+/* line 240, ../sass/pure-tooltip.sass */
+.rtl [tooltip][tooltip-placement="after"]:after, .rtl [tooltip][tooltip-placement="after"]:before {
+  left: inherit;
+  bottom: inherit;
+  right: 100%;
+  top: 50%;
+}
+/* line 245, ../sass/pure-tooltip.sass */
+.rtl [tooltip][tooltip-placement="after"]:after {
+  transform: translate(-0.5em, -50%);
+  -webkit-transform: translate(-0.5em, -50%);
+  -moz-transform: translate(-0.5em, -50%);
+  -o-transform: translate(-0.5em, -50%);
+}
+/* line 247, ../sass/pure-tooltip.sass */
+.rtl [tooltip][tooltip-placement="after"]:before {
+  transform: translate(0.2em, 0);
+  -webkit-transform: translate(0.2em, 0);
+  -moz-transform: translate(0.2em, 0);
+  -o-transform: translate(0.2em, 0);
+  border-color: transparent;
+  border-left-color: rgba(0, 0, 0, 0.8);
+}
+/* line 253, ../sass/pure-tooltip.sass */
+.rtl [tooltip][tooltip-placement="after"]:not([tooltip-trigger="focus"]):hover:after, .rtl [tooltip][tooltip-placement="after"]:focus:after {
+  animation: fadeInDown-left 0.2s linear;
+  -webkit-animation: fadeInDown-left 0.2s linear;
+  -moz-animation: fadeInDown-left 0.2s linear;
+  -o-animation: fadeInDown-left 0.2s linear;
+}
+/* line 255, ../sass/pure-tooltip.sass */
+.rtl [tooltip][tooltip-placement="after"]:not([tooltip-trigger="focus"]):hover:before, .rtl [tooltip][tooltip-placement="after"]:focus:before {
+  animation: fadeInDown-tip-left 0.2s linear;
+  -webkit-animation: fadeInDown-tip-left 0.2s linear;
+  -moz-animation: fadeInDown-tip-left 0.2s linear;
+  -o-animation: fadeInDown-tip-left 0.2s linear;
+}
