@@ -9,6 +9,13 @@ body
 	p
 		text-align: left
 
+.clearfix:before, .clearfix:after
+	content: ''
+	display: table
+
+.clearfix:after
+	clear: both
+
 .rtl
 	direction: rtl
 	p
