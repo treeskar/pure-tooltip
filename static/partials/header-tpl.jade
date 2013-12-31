@@ -1,8 +1,9 @@
-header
-	h1.tooltip-head Pure CSS tooltips
-	nav
-		ul
-			li(data-ng-class="{active: activePage=='demo'}")
-				a(href="/demo") DEMO
-			li(data-ng-class="{active: activePage=='diy'}")
-				a(href="/diy") DIY
+script(type="text/ng-template", id="header-tpl.html")
+	header
+		h1.tooltip-head(data-demo-tooltip="data") Pure CSS tooltips
+		nav
+			ul
+				li(data-ng-class="{active: activePage=='demo'}")
+					a(href="/demo") DEMO
+				li(data-ng-class="{active: activePage=='diy'}")
+					a(href="/diy") DIY
