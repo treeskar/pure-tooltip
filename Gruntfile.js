@@ -38,16 +38,17 @@ module.exports = function(grunt) {
 			main: {
 				options: {
 					sassDir: 'static/sass/',
-					cssDir: 'static/css/'
+					cssDir: 'static/tmp/css/'
 				}
 			}
 		},
 		cssmin: {
 			main: {
 				files: {
-					'build/css/style.css': ['static/css/**/*.css']
 					'build/css/style.css': [
 						'bower_components/angular-bootstrap-colorpicker/css/colorpicker.css',
+						'static/tmp/css/**/*.css'
+					]
 				}
 			}
 		},
@@ -124,7 +125,7 @@ module.exports = function(grunt) {
 				tasks: ['compass']
 			},
 			css: {
-				files: ['static/css/**/*.css'],
+				files: ['static/tmp/css/**/*.css'],
 				tasks: ['cssmin']
 			},
 			img: {
