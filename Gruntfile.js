@@ -46,6 +46,8 @@ module.exports = function(grunt) {
 			main: {
 				files: {
 					'build/css/style.css': ['static/css/**/*.css']
+					'build/css/style.css': [
+						'bower_components/angular-bootstrap-colorpicker/css/colorpicker.css',
 				}
 			}
 		},
@@ -59,6 +61,7 @@ module.exports = function(grunt) {
 						'bower_components/angular/angular.min.js',
 						'bower_components/angular-animate/angular-animate.min.js',
 						'bower_components/angular-route/angular-route.min.js',
+						'bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js',
 						'static/app/controllers.js',
 						'static/app/directives.js',
 						'static/app/app.js'

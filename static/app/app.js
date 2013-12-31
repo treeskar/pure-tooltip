@@ -3,6 +3,7 @@
 
 	angular
 		.module('app',['ngAnimate','ngRoute', 'Controllers', 'Directives'])
+		.module('app',['ngAnimate','ngRoute', 'ngSanitize', 'Controllers', 'colorpicker.module', 'Directives'])
 		.constant('Constant', {
 			resource: {
 				tpl: '/partials/'
