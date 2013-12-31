@@ -1,39 +1,40 @@
-div(data-header, data-page="page")
-article
-	p
-		| Lorem ipsum dolor sit amet,&nbsp;
-		a(href="javascript:void(0)", tooltip="Default tooltip") top
-		|  adipisicing elit. Consequuntur cupiditate est illum&nbsp;
-		a(href="javascript:void(0)", tooltip="Tooltip on the bottom", tooltip-placement="bottom") bottom
-
-	p.
-		nesciunt quidem similique tempore unde voluptatem voluptatibus.
-		Accusantium architecto asperiores, assumenda eius laboriosam magnam mollitia nisi quos?
-
-	p
-		| Lorem ipsum dolor sit amet, consectetur adipisicing elit.&nbsp;
-		a(href="javascript:void(0)", tooltip="Left positions", tooltip-placement="left") left
-		|  earum exercitationem illo,
-		| illum inventore laudantium nemo tempore voluptas! Blanditiis cumque distinctio dolor dolorum ex
-		| facilis ipsa,&nbsp;
-		a(href="javascript:void(0)", tooltip="Right positions", tooltip-placement="right") right
-		|  magnam minus molestias mollitia nam, provident quaerat tenetur velit vero voluptate,
-		| voluptatem voluptates. Accusamus eius fugiat illum recusandae veritatis. Accusamus, architecto, aut
-		| consectetur eaque esse illo&nbsp;
-		a(href="javascript:void(0)", tooltip="Tooltip on focus", tooltip-trigger="focus", tabindex="0") tooltip on focus
-		|  ipsum labore minima molestiae&nbsp;
-		a(href="javascript:void(0)", tooltip="Right tooltip on focus", tooltip-trigger="focus", tooltip-placement="right", tabindex="0") right tooltip on focus
-		|  perspiciatis placeat quos repellendus
-		|  sint tempore veritatis&nbsp;
-		a(href="javascript:void(0)", tooltip="Before positions", tooltip-placement="before") voluptatum
-		|  Excepturi illo nulla qui sunt. Accusamus ad adipisci aliquam aperiam, <br>
-		a(href="javascript:void(0)", tooltip="After positions", tooltip-placement="after") after link
-		|  doloribus eligendi ex harum hic in ipsa iusto laboriosam magni nesciunt quasi qui quos recusandae
-	div.rtl
+script(type="text/ng-template", id="demo.html")
+	div(data-header, data-page="page")
+	article
 		p
-			| דוגמא לתמיכה בכיוון כתיבה מימין לשמאל &nbsp;
-			a(href="javascript:void(0)", tooltip="Left positions", tooltip-placement="left") לינק
-			|  כמו כן יש אפשרות בהודע לפני ואחרי הטקסט&nbsp;
-			a(href="javascript:void(0)", tooltip="Before positions rtl support", tooltip-placement="before") לינק
-			|  אפשר למקם טולטיפ אחורי הלינק &nbsp;
-			a(href="javascript:void(0)", tooltip="After positions rtl support", tooltip-placement="after") לינק
+			| Lorem ipsum dolor sit amet,&nbsp;
+			a(href="javascript:void(0)", tooltip="Default tooltip") top
+			|  adipisicing elit. Consequuntur cupiditate est illum&nbsp;
+			a(href="javascript:void(0)", tooltip="Tooltip on the bottom", tooltip-placement="bottom") bottom
+
+		p.
+			nesciunt quidem similique tempore unde voluptatem voluptatibus.
+			Accusantium architecto asperiores, assumenda eius laboriosam magnam mollitia nisi quos?
+
+		p
+			| Lorem ipsum dolor sit amet, consectetur adipisicing elit.&nbsp;
+			a(href="javascript:void(0)", tooltip="Left positions", tooltip-placement="left") left
+			|  earum exercitationem illo,
+			| illum inventore laudantium nemo tempore voluptas! Blanditiis cumque distinctio dolor dolorum ex
+			| facilis ipsa,&nbsp;
+			a(href="javascript:void(0)", tooltip="Right positions", tooltip-placement="right") right
+			|  magnam minus molestias mollitia nam, provident quaerat tenetur velit vero voluptate,
+			| voluptatem voluptates. Accusamus eius fugiat illum recusandae veritatis. Accusamus, architecto, aut
+			| consectetur eaque esse illo&nbsp;
+			a(href="javascript:void(0)", tooltip="Tooltip on focus", tooltip-trigger="focus", tabindex="0") tooltip on focus
+			|  ipsum labore minima molestiae&nbsp;
+			a(href="javascript:void(0)", tooltip="Right tooltip on focus", tooltip-trigger="focus", tooltip-placement="right", tabindex="0") right tooltip on focus
+			|  perspiciatis placeat quos repellendus
+			|  sint tempore veritatis&nbsp;
+			a(href="javascript:void(0)", tooltip="Before positions", tooltip-placement="before") voluptatum
+			|  Excepturi illo nulla qui sunt. Accusamus ad adipisci aliquam aperiam, <br>
+			a(href="javascript:void(0)", tooltip="After positions", tooltip-placement="after") after link
+			|  doloribus eligendi ex harum hic in ipsa iusto laboriosam magni nesciunt quasi qui quos recusandae
+		div.rtl
+			p
+				| דוגמא לתמיכה בכיוון כתיבה מימין לשמאל &nbsp;
+				a(href="javascript:void(0)", tooltip="Left positions", tooltip-placement="left") לינק
+				|  כמו כן יש אפשרות בהודע לפני ואחרי הטקסט&nbsp;
+				a(href="javascript:void(0)", tooltip="Before positions rtl support", tooltip-placement="before") לינק
+				|  אפשר למקם טולטיפ אחורי הלינק &nbsp;
+				a(href="javascript:void(0)", tooltip="After positions rtl support", tooltip-placement="after") לינק
