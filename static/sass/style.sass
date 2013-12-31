@@ -45,8 +45,6 @@ a
 	margin: 2em auto
 	text-align: center
 	header
-		//border-bottom: 1px solid #ccc
-		//@include prefix(box-shadow, 0 1px 0 rgba(255,255,255,.8))
 		margin-bottom: 2em
 		h1.tooltip-head
 			display: inline-block
@@ -57,6 +55,7 @@ a
 			text-shadow: 1px 1px 0 #000
 			margin: 1em 0
 			font-size: 2em
+			outline: none
 			@include prefix(box-shadow, 0 0 1em rgba(0, 0, 0, 0.5))
 			&:before
 				content: ''
@@ -67,8 +66,8 @@ a
 				width: 1em
 				height: 1em
 				background: rgba(0, 0, 0, 0.2)
-				@include prefix(border-radius, 50%)
-				@include prefix(transform, translate(-50%, .5em))
+				@include border-radius(50%)
+				@include translate(-50%, .5em)
 			&:after
 				content: ''
 				display: block
@@ -88,7 +87,7 @@ a
 		nav
 			border-top: 2px solid rgba(23, 59, 151, 0.6)
 			background-color: rgba(23, 59, 151, 0.5)
-			@include prefix(border-radius, 0 0 .3em .3em)
+			@include border-radius(0 0 .3em .3em)
 			@include prefix(box-shadow, 0 0 .5em rgba(0,0,0,.5))
 			ul
 				display: block
@@ -118,16 +117,6 @@ a
 
 	article
 		color: #333
-		p
-			font-size: 120%
-			line-height: 160%
-			margin: 1em 0
-		a
-			color: #1443BB
-			text-decoration: none
-			@include prefix(transition, .3s ease-in-out color)
-			&:hover
-				color: #1657FC
 
 	form
 		text-align: left
