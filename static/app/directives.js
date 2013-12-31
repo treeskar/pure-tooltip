@@ -55,6 +55,11 @@
 					'</div>'
 			};
 		}])
+		.directive('header', ['Constant',function(Constant){
+			return {
+				restrict: 'A',
+				replace: true,
+				priority: 20,
 				link: function(scope, attr){
 				},
 				templateUrl: 'header-tpl.html'
