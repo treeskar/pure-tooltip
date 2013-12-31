@@ -20,11 +20,11 @@
 				$routeProvider
 					.when('/demo', {
 						controller: 'demoCtrl',
-						templateUrl: Constant.resource.tpl+'demo-tpl.html'
+						templateUrl: 'demo.html'
 					})
 					.when('/diy', {
 						controller: 'diyCtrl',
-						templateUrl: Constant.resource.tpl+'diy-tpl.html'
+						templateUrl: 'diy.html'
 					})
 					.otherwise({
 						redirectTo: '/demo'

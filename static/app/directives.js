@@ -11,9 +11,8 @@
 					activePage: '=page'
 				},
 				link: function(scope, attr){
-
 				},
-				templateUrl: Constant.resource.tpl+'header-tpl.html'
+				templateUrl: 'header-tpl.html'
 			};
 		}]);
 }());
