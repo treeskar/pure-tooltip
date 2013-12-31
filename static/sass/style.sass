@@ -79,6 +79,12 @@ a
 				left: 50%
 				top: 100%
 				@include prefix(transform, translateX(-50%))
+		.affix h1.tooltip-head
+			@include translateX(-50%)
+			position: fixed
+			top: 0
+			left: 50%
+			margin-top: .2em
 		nav
 			border-top: 2px solid rgba(23, 59, 151, 0.6)
 			background-color: rgba(23, 59, 151, 0.5)
