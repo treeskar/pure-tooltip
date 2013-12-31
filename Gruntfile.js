@@ -150,6 +150,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-concurrent');
 
 	// Register tasks.
-	grunt.registerTask('build', ['jade', 'compass', 'cssmin', 'jshint', 'uglify', 'copy']);
+	grunt.registerTask('build', ['jade', 'compass', 'cssmin', 'jshint', 'uglify', 'concat', 'copy']);
 	grunt.registerTask('default', ['build', 'concurrent']);
 };
