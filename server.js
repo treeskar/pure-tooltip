@@ -9,5 +9,5 @@ app.get('*', function(req,res){
 	res.sendfile(file);
 });
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 7000;
 app.listen(port);
