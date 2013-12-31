@@ -129,21 +129,66 @@ a
 			&:hover
 				color: #1657FC
 
-		form
-			text-align: left
-			padding: 1em 0
-			border-top: 2px solid #ccc
-			@include prefix(box-shadow, 0 -1px 0 #fff)
-			label
-				font-size: 1em
-				margin: 0 1em
-			input
-				font-size: 1em
+	form
+		text-align: left
+		padding: 1em 0
+		label
+			font-size: 1em
+			margin: 0 1em
+			display: inline-block
+			@include prefix(box-sizing, border-box)
+			text-align: right
+			vertical-align: middle
+			width: 50%
+			cursor: pointer
+			&:after
+				content: ':'
+		.input-wrapper
+			vertical-align: middle
+			display: inline-block
+			.color, input[type="color"]
+				display: inline-block
+				cursor: pointer
+				-webkit-appearance: none
+				border: 2px solid #fff
+				width: 1.2em
+				height: 1.2em
 				outline: none
+				&::-webkit-color-swatch-wrapper
+					padding: 0
+				&::-webkit-color-swatch
+					border: none
+				&:focus, &:hover, &:active
+					border-color: rgba(23, 59, 151, 0.5)
+		input[type="text"]
+			font-size: 1em
+			outline: none
+			padding: .5em 1em
+			border: 2px solid #cccccc
+			&:focus
+				border-color: #6FA6D1
+		fieldset
+			width: 50%
+			display: inline-block
+			vertical-align: top
+			@include prefix(box-sizing, border-box)
+			&:nth-child(2n)
+				border-left: 1px dashed #ccc
+			legend
+				display: block
+				width: 100%
+				@include prefix(box-sizing, border-box)
+				border-bottom: 1px solid #cccccc
 				padding: .5em 1em
-				border: 2px solid #cccccc
-				&:focus
-					border-color: #6FA6D1
+				color: #666
+				font-size: 1.2em
+			.row
+				margin: 1em 0
+				padding: .5em 0
+				label
+					text-align: right
+					color: #666
+
 	footer
 		border-top: 1px solid #ccc
 		margin-top: 2em
