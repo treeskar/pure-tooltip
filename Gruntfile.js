@@ -82,9 +82,10 @@ module.exports = function(grunt) {
 			main: {
 				files: [
 					{
+						cwd: "static/",
 						expand: true,
-						src: ['static/img/**/*'],
-						dest: 'build/img/'
+						src: ['img/**/*'],
+						dest: 'build/'
 					}
 				]
 			}
