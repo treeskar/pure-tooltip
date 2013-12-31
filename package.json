@@ -8,6 +8,7 @@
 		"grunt-contrib-jshint": "~0.6.3",
 		"grunt-contrib-uglify": "~0.2.2",
 		"grunt-contrib-jade": "x",
+		"grunt-contrib-concat": "x",
 		"grunt-contrib-compass": "x",
 		"grunt-contrib-cssmin": "x",
 		"grunt-contrib-watch": "x",

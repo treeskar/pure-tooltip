@@ -21,9 +21,9 @@ module.exports = function(grunt) {
 					{
 						cwd: "static/partials/",
 						src: "**/*.jade",
-						dest: "build/partials/",
+						dest: "static/tmp/partials/",
 						expand: true,
-						ext: ".html"
+						ext: ".js"
 					},{
 						cwd: "static/",
 						src: "index.jade",
@@ -69,6 +69,13 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		concat: {
+			main: {
+				files: {
+					'static/tmp/templates.js': ['static/tmp/partials/**/*.js']
+				}
+			}
+		},
 		copy: {
 			main: {
 				files: [
@@ -104,6 +111,10 @@ module.exports = function(grunt) {
 				files: ['static/index.jade','static/partials/**/*.jade'],
 				tasks: ['jade']
 			},
+			concat_tpl: {
+				files: ['static/tmp/partials/**/*.js'],
+				tasks: ['concat']
+			},
 			js: {
 				files: ['Gruntfile.js', 'static/app/**/*.js'],
 				tasks: ['jshint', 'uglify']
@@ -128,6 +139,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-nodemon');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-copy');
