@@ -1,5 +1,13 @@
-var express = require('express');
-var app = express();
+var express = require('express'),
+	app = express(),
+	debug = true;
+
+if(debug){
+	// Get source map
+	app.get(/js\/(static|bower_components)(.+)/, function(req,res){
+		res.sendfile(req.params[0]+'/'+req.params[1]);
+	});
+}
 
 app.get('*', function(req,res){
 	var file = 'build/index.html';

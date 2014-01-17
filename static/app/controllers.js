@@ -4,7 +4,6 @@
 	angular.module('Controllers', [])
 		.controller('demoCtrl', ['$scope', function($scope){
 			$scope.activePage = 'demo';
-
 		}])
 		.controller('diyCtrl', ['$scope', function($scope){
 			$scope.activePage = 'diy';
