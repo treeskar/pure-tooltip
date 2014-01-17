@@ -1,96 +1,100 @@
-script(type="text/ng-template", id="diy.html")
-	div(data-header, data-page="page")
-	form(name="tooltipForm")
+script(
+		type='text/ng-template',
+		id='diy.html')
+	div(
+		data-header,
+		data-page='page')
+	form(name='tooltipForm')
 		fieldset
 			legend Tooltip body
 			.row
-				label(for="boxColor") Background color
+				label(for='boxColor') Background color
 				div.input-wrapper
 					span.color(
-							data-colorpicker="rgba",
-							data-ng-model="tooltip.boxColor",
-							ng-style="{background: tooltip.boxColor}"
+							data-colorpicker='rgba',
+							data-ng-model='tooltip.boxColor',
+							ng-style='{background: tooltip.boxColor}'
 						)
 			.row
-				label(for="boxShadowColor") Shadow color
+				label(for='boxShadowColor') Shadow color
 				div.input-wrapper
 					span.color(
-							data-colorpicker="rgba",
-							data-ng-model="tooltip.boxShadowColor",
-							ng-style="{background: tooltip.boxShadowColor}"
+							data-colorpicker='rgba',
+							data-ng-model='tooltip.boxShadowColor',
+							ng-style='{background: tooltip.boxShadowColor}'
 						)
 			.row
-				label(for="boxShadowSize") Shadow size
+				label(for='boxShadowSize') Shadow size
 				div.input-wrapper
 					input#boxShadowSize(
-							type="range",
-							min="0",
-							max="50",
-							name="boxShadowSize",
-							data-ng-model="tooltip.boxShadowSize"
+							type='range',
+							min='0',
+							max='50',
+							name='boxShadowSize',
+							data-ng-model='tooltip.boxShadowSize'
 						)
 			.row
-				label(for="boxRadius") Border radius
+				label(for='boxRadius') Border radius
 				div.input-wrapper
 					input#boxRadius(
-							type="range",
-							min="0",
-							max="50",
-							name="boxRadius",
-							data-ng-model="tooltip.boxRadius"
+							type='range',
+							min='0',
+							max='50',
+							name='boxRadius',
+							data-ng-model='tooltip.boxRadius'
 						)
 			.row
-				label(for="triangleSize") Triangle size
+				label(for='triangleSize') Triangle size
 				div.input-wrapper
 					input#triangleSize(
-							type="range",
-							min="0",
-							max="50",
-							name="triangleSize",
-							data-ng-model="tooltip.triangleSize"
+							type='range',
+							min='0',
+							max='50',
+							name='triangleSize',
+							data-ng-model='tooltip.triangleSize'
 						)
 		fieldset
 			legend Tooltip content
 			.row
-				label(for="textColor") Text color
+				label(for='textColor') Text color
 				div.input-wrapper
 					span.color(
-							data-colorpicker="rgba",
-							data-ng-model="tooltip.textColor",
-							ng-style="{background: tooltip.textColor}"
+							data-colorpicker='rgba',
+							data-ng-model='tooltip.textColor',
+							ng-style='{background: tooltip.textColor}'
 						)
 			.row
-				label(for="textShadowColor") Shadow color
+				label(for='textShadowColor') Shadow color
 				div.input-wrapper
 					span.color(
-							data-colorpicker="rgba",
-							data-ng-model="tooltip.textShadowColor",
-							ng-style="{background: tooltip.textShadowColor}"
+							data-colorpicker='rgba',
+							data-ng-model='tooltip.textShadowColor',
+							ng-style='{background: tooltip.textShadowColor}'
 						)
 			.row
-				label(for="textSize") Text size
+				label(for='textSize') Text size
 				div.input-wrapper
 					input#textSize(
-							type="range",
-							min="9",
-							max="20",
-							name="textSize",
-							data-ng-model="tooltip.textSize"
+							type='range',
+							min='9',
+							max='20',
+							name='textSize',
+							data-ng-model='tooltip.textSize'
 						)
 			.row
-				label(for="textShadowSize") Shadow size
+				label(for='textShadowSize') Shadow size
 				div.input-wrapper
 					input#textShadowSize(
-							type="range",
-							min="0",
-							max="10",
-							name="textShadowSize",
-							data-ng-model="tooltip.textShadowSize"
+							type='range',
+							min='0',
+							max='10',
+							name='textShadowSize',
+							data-ng-model='tooltip.textShadowSize'
 						)
 		h3 Example of what you done
 		p
 			| Lorem ipsum dolor sit&nbsp;
-			a(href="javascript:void(0)", tooltip="Default tooltip") amet
+			a(href='javascript:void(0)', tooltip='Default tooltip') amet
 			|  consectetur adipisicing elit,
 			| sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 			| laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
