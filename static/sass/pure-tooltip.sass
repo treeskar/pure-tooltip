@@ -16,32 +16,32 @@
 	0%
 		opacity: 0
 		z-index: -100
-		@include prefix(transform, translate(-50%, -1.2em))
+		@include prefix(transform, translate(-50%, -1em))
 	100%
 		opacity: 1
 		z-index: 100
-		@include prefix(transform, translate(-50%, -.2em))
+		@include prefix(transform, translate(-50%, 0))
 
 // bottom tooltip animation
 @include keyframe(fadeInDown-bottom)
 	0%
 		opacity: 0
 		z-index: -100
-		@include prefix(transform, translate(-50%, 1.5em))
+		@include prefix(transform, translate(-50%, 1.4em))
 	100%
 		opacity: 1
 		z-index: 100
-		@include prefix(transform, translate(-50%, .5em))
+		@include prefix(transform, translate(-50%, .4em))
 
 @include keyframe(fadeInDown-tip-bottom)
 	0%
 		opacity: 0
 		z-index: -100
-		@include prefix(transform, translate(-50%, 1.2em))
+		@include prefix(transform, translate(-50%, 1em))
 	100%
 		opacity: 1
 		z-index: 100
-		@include prefix(transform, translate(-50%, .2em))
+		@include prefix(transform, translate(-50%, 0))
 
 // right tooltip animation
 @include keyframe(fadeInDown-right)
@@ -110,6 +110,7 @@ $textColor: #fff
 	position: relative
 	&:hover, &:focus
 		// must be visible on hover
+		opacity: 1
 		overflow: visible
 		z-index: 10
 	
@@ -117,8 +118,11 @@ $textColor: #fff
 		position: absolute
 		display: none
 		opacity: 0
-		font: normal .8em Arial, Helvetica, sans-serif
-		line-height: 1em
+		font-size: 12px
+		font-weight: normal
+		font-style: normal
+		font-family: Arial, Helvetica, sans-serif
+		line-height: 12px
 		@include prefix(transition, .5s linear opacity)
 	
 	&:after 
@@ -138,10 +142,11 @@ $textColor: #fff
 		top: 0
 		left: 50%
 		content: ''
-		@include prefix(transform, translate(-50%, -.2em))
+		@include prefix(transform, translate(-50%, 0))
 		border: .4em solid transparent
 		border-top-color: $backgroundColor
 		margin: -.4em auto
+		font-size: 14px
 	
 	&:not([#{$triggerAttr}="focus"]):hover,
 	&:focus
@@ -161,12 +166,12 @@ $textColor: #fff
 		&:after 
 			bottom: inherit
 			top: 100%
-			@include prefix(transform, translate(-50%, .5em))
+			@include prefix(transform, translate(-50%, .4em))
 		
 		&:before
 			bottom: inherit
 			top: 100%
-			@include prefix(transform, translate(-50%, .2em))
+			@include prefix(transform, translate(-50%, 0em))
 			border-color: transparent
 			border-bottom-color: $backgroundColor
 
