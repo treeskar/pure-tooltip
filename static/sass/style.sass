@@ -40,6 +40,10 @@ a
 	&:hover
 		color: #1657FC
 
+pre
+	color: #333333
+	border: 1px solid #ccc
+
 #wrapper
 	width: 70%
 	margin: 2em auto
@@ -91,6 +95,8 @@ a
 			@include prefix(box-shadow, 0 0 .5em rgba(0,0,0,.5))
 			ul
 				display: block
+				position: relative
+				z-index: 2
 				li
 					list-style: none
 					display: inline-block
@@ -114,6 +120,7 @@ a
 						font-size: 1.2em
 						text-decoration: none
 						display: block
+						text-transform: uppercase
 
 	article
 		color: #333
