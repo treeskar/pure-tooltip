@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('app',['ngAnimate','ngRoute', 'ngSanitize', 'Controllers', 'colorpicker.module', 'Directives'])
+		.module('app',['ngAnimate','ngRoute', 'ngSanitize', 'Controllers', 'hljs', 'colorpicker.module', 'Directives'])
 		.constant('Constant', {
 			resource: {
 				tpl: '/partials/'
