@@ -46,6 +46,7 @@ module.exports = function(grunt) {
 			main: {
 				files: {
 					'build/css/style.css': [
+						'bower_components/highlightjs/styles/github.css',
 						'bower_components/angular-bootstrap-colorpicker/css/colorpicker.css',
 						'static/tmp/css/**/*.css'
 					]
@@ -55,14 +56,17 @@ module.exports = function(grunt) {
 		uglify: {
 			main: {
 				options: {
-					sourceMap: 'build/js/script-map.js'
+					sourceMap: 'build/js/script-map.js',
+					sourceMappingURL: '/js/script-map.js'
 				},
 				files: {
 					'build/js/script.min.js': [
+						'bower_components/highlightjs/highlight.pack.js',
 						'bower_components/angular/angular.min.js',
 						'bower_components/angular-animate/angular-animate.min.js',
 						'bower_components/angular-route/angular-route.min.js',
 						'bower_components/angular-sanitize/angular-sanitize.min.js',
+						'bower_components/angular-highlightjs/angular-highlightjs.min.js',
 						'bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js',
 						'static/app/controllers.js',
 						'static/app/directives.js',
