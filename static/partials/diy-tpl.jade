@@ -25,7 +25,7 @@ script(
 						)
 			.row
 				label(for='boxShadowSize') Shadow size
-				div.input-wrapper
+				div.input-wrapper.range-wrapper
 					input#boxShadowSize(
 							type='range',
 							min='0',
@@ -35,7 +35,7 @@ script(
 						)
 			.row
 				label(for='boxRadius') Border radius
-				div.input-wrapper
+				div.input-wrapper.range-wrapper
 					input#boxRadius(
 							type='range',
 							min='0',
@@ -45,7 +45,7 @@ script(
 						)
 			.row
 				label(for='triangleSize') Triangle size
-				div.input-wrapper
+				div.input-wrapper.range-wrapper
 					input#triangleSize(
 							type='range',
 							min='0',
@@ -73,7 +73,7 @@ script(
 						)
 			.row
 				label(for='textSize') Text size
-				div.input-wrapper
+				div.input-wrapper.range-wrapper
 					input#textSize(
 							type='range',
 							min='9',
@@ -83,13 +83,21 @@ script(
 						)
 			.row
 				label(for='textShadowSize') Shadow size
-				div.input-wrapper
+				div.input-wrapper.range-wrapper
 					input#textShadowSize(
 							type='range',
 							min='0',
 							max='10',
 							name='textShadowSize',
 							data-ng-model='tooltip.textShadowSize'
+						)
+			.row
+				label(for='attribute') Attribute
+				div.input-wrapper.range-wrapper
+					input#attribute(
+							type='text',
+							name='attribute',
+							data-ng-model='tooltip.attribute'
 						)
 		h3 Example of what you done
 		p

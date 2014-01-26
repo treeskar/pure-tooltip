@@ -31,7 +31,7 @@
 	100%
 		opacity: 1
 		z-index: 100
-		@include prefix(transform, translate(-50%, .4em))
+		@include prefix(transform, translate(-50%, .3em))
 
 @include keyframe(fadeInDown-tip-bottom)
 	0%
@@ -166,7 +166,7 @@ $textColor: #fff
 		&:after 
 			bottom: inherit
 			top: 100%
-			@include prefix(transform, translate(-50%, .4em))
+			@include prefix(transform, translate(-50%, .3em))
 		
 		&:before
 			bottom: inherit
@@ -193,6 +193,7 @@ $textColor: #fff
 			@include prefix(transform, translate( -.2em, 0))
 			border-color: transparent
 			border-right-color: $backgroundColor
+			margin: -.3em auto
 		&:not([#{$triggerAttr}="focus"]):hover,
 		&:focus
 			&:after
@@ -207,11 +208,12 @@ $textColor: #fff
 			right: 100%
 			top: 50%
 		&:after
-			@include prefix(transform, translate(-.5em, -50%))
+			@include prefix(transform, translate(-.6em, -50%))
 		&:before
 			@include prefix(transform, translate(.2em, 0))
 			border-color: transparent
 			border-left-color: $backgroundColor
+			margin: -.3em auto
 		&:not([#{$triggerAttr}="focus"]):hover,
 		&:focus
 			&:after

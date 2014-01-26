@@ -35,7 +35,7 @@
 								'border-radius: '+scope.tooltip.boxRadius+'px;'+
 								'box-shadow: 0 0 '+scope.tooltip.boxShadowSize+'px '+scope.tooltip.boxShadowColor+';'+
 								'color: '+scope.tooltip.textColor+';'+
-								'font-size: '+Math.round(scope.tooltip.textSize*2)+'px;'+
+								'font-size: '+Math.round(scope.tooltip.textSize*2.15)+'px;'+
 								'text-shadow: 0 0 '+scope.tooltip.textShadowSize+'px '+scope.tooltip.textShadowColor+';'+
 							'}'+
 							'#wrapper header h1.tooltip-head:after {' +

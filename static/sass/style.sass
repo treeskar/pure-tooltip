@@ -43,6 +43,8 @@ a
 pre
 	color: #333333
 	border: 1px solid #ccc
+	code
+		overflow-x: auto
 
 #wrapper
 	width: 70%
@@ -135,7 +137,7 @@ pre
 			@include prefix(box-sizing, border-box)
 			text-align: right
 			vertical-align: middle
-			width: 50%
+			width: 35%
 			cursor: pointer
 			&:after
 				content: ':'
@@ -161,6 +163,7 @@ pre
 			outline: none
 			padding: .5em 1em
 			border: 2px solid #cccccc
+			color: #666
 			&:focus
 				border-color: #6FA6D1
 		fieldset
@@ -235,5 +238,64 @@ a.fork
 		cursor: pointer
 		&:hover
 			color: #000
+
+@media all and (max-width: 1060px)
+	#wrapper form fieldset .row label
+		width: auto
+
+@media all and (max-width: 950px)
+	#wrapper
+		width: 80%
+		form fieldset .row
+			text-align: left
+			.range-wrapper
+				display: block
+				input
+					display: block
+					width: 90%
+					margin: .5em auto
+					box-sizing: border-box
+
+@media all and (max-width: 780px)
+	#wrapper
+		width: 85%
+		header .affix h1.tooltip-head
+			width: 40%
+
+@media all and (max-width: 650px)
+	#wrapper
+		width: 90%
+		header .affix h1.tooltip-head
+			width: 50%
+
+@media all and (max-width: 650px)
+	#wrapper
+		width: 100%
+		header
+			nav
+				border-radius: 0
+
+@media all and (max-width: 550px)
+	#wrapper
+		form
+			fieldset
+				display: block
+				width: auto
+				legend, .row
+					padding: 1em 2em
+					margin: 0
+			h3, p
+				padding: 1em 2em
+				margin: 0
+
+@media all and (max-width: 500px)
+	#wrapper
+		header .affix h1.tooltip-head
+			width: 60%
+
+@media all and (max-width: 450px)
+	#wrapper
+		header nav ul li a
+			padding: .6em 1.5em
 
 @import "pure-tooltip"

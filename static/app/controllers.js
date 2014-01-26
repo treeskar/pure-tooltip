@@ -14,11 +14,12 @@
 				boxRadius: 0,
 				boxShadowColor: 'rgba(0, 0, 0, 0.5)',
 				boxShadowSize: 30,
-				triangleSize: 25,
+				triangleSize: 32,
 				textColor: '#FFF',
 				textSize: 15,
 				textShadowColor: '#000000',
 				textShadowSize: 16,
+				attribute: 'tooltip',
 				affix: true
 			};
 		}]);
