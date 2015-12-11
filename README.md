@@ -11,7 +11,7 @@ Demo http://pure-tooltip.com
 
 1. ✓ Fade in animation 
 2. Browser support optimization
-3. Placement (before, after) rtl support
+3. ✓ Placement (before, after) rtl support
 
 ## License
 
