@@ -1,6 +1,6 @@
 #Pure tooltip
 
-Demo http://pure-tooltip.com
+Demo https://codepen.io/treeskar/pen/pyvBop
 
 **Project not, for production use.**
 
